@@ -7,8 +7,8 @@ Open `index.html` in a browser and it just works.
 
 | File | What it is |
 |---|---|
-| `index.html` | Home: hero + coast line, work index, about split, contact |
-| `work.html` | All projects, expanded with spec tables |
+| `index.html` | Home: hero + coast line, projects index, about split, contact |
+| `projects.html` | All projects, expanded with spec tables |
 | `about.html` | Bio, the creed, favorite places |
 | `now.html` | What Ryan is doing now (update by hand, anytime) |
 | `style.css` | All styling for every page (colors at the top in `:root`) |
@@ -20,9 +20,9 @@ Every editable region is marked with a comment that starts with `✏️ EDIT`.
 Search any file for `✏️` to find them. General rules:
 
 - **Add a project to the home page** — in `index.html`, find the `✏️ EDIT` comment
-  above the work list. Copy one whole `<a class="work ...">…</a>` block, paste it,
+  above the projects list. Copy one whole `<a class="work ...">…</a>` block, paste it,
   change the words. The class `w-coral` / `w-sky` / `w-lime` / `w-gold` picks its color.
-- **Add a full project page entry** — same idea in `work.html`: copy one whole
+- **Add a full project page entry** — same idea in `projects.html`: copy one whole
   `<article class="project …">…</article>` block, paste it at the end, change the words
   and the `id="..."` (any short word, no spaces).
 - **Update the /now page** — in `now.html`, edit any `<div class="now …">` block, and

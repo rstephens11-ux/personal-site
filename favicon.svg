@@ -1,5 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- tile + border -->
   <rect x="24" y="24" width="464" height="464" rx="118" fill="#0b0b0a" stroke="#6d92a4" stroke-width="6"/>
-  <text x="256" y="344" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="300" fill="#ece9e2" text-anchor="middle">R</text>
-  <circle cx="440" cy="72" r="21" fill="#93a860"/>
+
+  <!-- trunk: sturdy, flared base -->
+  <path fill="#ece9e2" d="
+    M 234 300 L 232 408 Q 256 421 280 408 L 278 300 Z
+  "/>
+
+  <!-- forked limbs -->
+  <path fill="#ece9e2" d="
+    M 246 300 L 204 248 L 224 234 L 262 292 Z
+    M 266 300 L 308 248 L 288 234 L 250 292 Z
+  "/>
+
+  <!-- oak crown -->
+  <g fill="#ece9e2">
+    <circle cx="256" cy="165" r="60"/>
+    <circle cx="192" cy="200" r="52"/>
+    <circle cx="320" cy="200" r="52"/>
+    <circle cx="212" cy="130" r="46"/>
+    <circle cx="300" cy="130" r="46"/>
+    <circle cx="160" cy="228" r="38"/>
+    <circle cx="352" cy="228" r="38"/>
+  </g>
 </svg>

@@ -260,6 +260,17 @@ section{padding:12vh 4vw}
 .project .specs .k{color:var(--ink-dim);display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:3px}
 .project .specs .v{color:var(--ink)}
 
+/* project photos — one or more images inside a project block */
+.project .photos{display:grid;gap:14px;margin:22px 0}
+.project .photos img{
+  width:100%;height:auto;display:block;
+  border:1px solid var(--line);border-radius:4px;
+}
+.project .photos.multi{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.project img.pic{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:4px;margin:22px 0}
+.project img + p{margin-top:0}
+
+
 /* now-page entries */
 .now-list{border-top:1px solid var(--line)}
 .now{

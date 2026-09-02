@@ -41,8 +41,20 @@
        and paste it at the end of this list. Change the text and the id="..." anchor.
        Color classes: p-coral (rust) / p-sky (slate) / p-lime (moss) / p-gold (ochre). -->
   <div class="project-list">
+  <div class="filter-bar">
+    <button class="active" data-filter="all">All</button>
+    <button data-sort="newest">Newest</button>
+    <button data-sort="oldest">Oldest</button>
+    <span class="sep"></span>
+    <button data-filter="joinery">Joinery</button>
+    <button data-filter="carving">Carving</button>
+    <button data-filter="steam-bending">Steam Bending</button>
+    <button data-filter="chairmaking">Chairmaking</button>
+    <button data-filter="greenwoodworking">Green Woodworking</button>
+    <button data-filter="general">General</button>
+  </div>
 
-    <article class="project p-coral rv" id="app">
+    <article class="project p-coral rv" data-date="2026-08" data-category="greenwoodworking" id="app">
       <div class="p-head">
         <span class="no">01</span>
         <h2>Spoons</h2>
@@ -58,7 +70,7 @@
       </div>
     </article>
 
-<article class="project p-lime rv" id="frames">
+<article class="project p-lime rv" data-date="2026-05" data-category="general" id="frames">
       <div class="p-head">
         <span class="no">02</span>
         <h2>Frames</h2>
@@ -77,7 +89,7 @@
       </div>
     </article>
 
-<article class="project p-coral rv" id="chest">
+<article class="project p-coral rv" data-date="2025-11" data-category="joinery" id="chest">
       <div class="p-head">
         <span class="no">03</span>
         <h2>Blanket Chest - 6 Board Chest</h2>
@@ -99,7 +111,7 @@
       </div>
     </article>
 
-<article class="project p-coral rv" id="stool">
+<article class="project p-coral rv" data-date="2025-07" data-category="general" id="stool">
       <div class="p-head">
         <span class="no">04</span>
         <h2>Stool for Levi</h2>
@@ -116,7 +128,7 @@
       </div>
     </article>
 
-<article class="project p-gold rv" id="macfat">
+<article class="project p-gold rv" data-date="2025-06" data-category="chairmaking" id="macfat">
       <div class="p-head">
         <span class="no">05</span>
         <h2>Make a Chair From a Tree - class at Maine Coast Craft School!</h2>
@@ -136,7 +148,7 @@
       </div>
     </article>
 
-<article class="project p-lime rv" id="eagle">
+<article class="project p-lime rv" data-date="2025-05" data-category="carving" id="eagle">
       <div class="p-head">
         <span class="no">06</span>
         <h2>Bellamy Eagle - class with Al Breed</h2>
@@ -159,7 +171,7 @@
       </div>
     </article>
 
-<article class="project p-gold rv" id="carrier">
+<article class="project p-gold rv" data-date="2025-04" data-category="steam-bending" id="carrier">
       <div class="p-head">
         <span class="no">07</span>
         <h2>Bentwood Firewood Carrier - class at Maine Coast Craft School!</h2>
@@ -177,7 +189,7 @@
       </div>
     </article>
 
-<article class="project p-lime rv" id="shaker">
+<article class="project p-lime rv" data-date="2024-11" data-category="steam-bending" id="shaker">
       <div class="p-head">
         <span class="no">08</span>
         <h2>Shaker Box - class at the Carpenters Boat Shop</h2>
@@ -194,7 +206,7 @@
       </div>
     </article>
 
-<article class="project p-coral rv" id="chair">
+<article class="project p-coral rv" data-date="2024-07" data-category="chairmaking" id="chair">
       <div class="p-head">
         <span class="no">09</span>
         <h2>Welsh Stick Chair - class at Maine Coast Craft School!</h2>

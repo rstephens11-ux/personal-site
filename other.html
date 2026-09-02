@@ -38,8 +38,17 @@
   </div>
 
   <div class="project-list">
+  <div class="filter-bar">
+    <button class="active" data-filter="all">All</button>
+    <button data-sort="newest">Newest</button>
+    <button data-sort="oldest">Oldest</button>
+    <span class="sep"></span>
+    <button data-filter="software">Software</button>
+    <button data-filter="animated-series">Animation</button>
+    <button data-filter="seasonal">Seasonal</button>
+  </div>
 
-    <article class="project p-sky rv" id="cartoon">
+    <article class="project p-sky rv" data-date="ongoing" data-category="animated-series" id="cartoon">
       <div class="p-head">
         <span class="no">01</span>
         <h2>Cartoon</h2>
@@ -53,27 +62,35 @@
       </div>
     </article>
 
-    <article class="project p-gold rv" id="ytdlp-app">
+<article class="project p-gold rv" data-date="2026-08" data-category="software" id="ytdlp-app">
       <div class="p-head">
         <span class="no">02</span>
         <h2>yt-dlp app</h2>
-        <span class="tag">macOS app · shell wrapper</span>
+        <span class="tag">macOS app · open source</span>
       </div>
-      <p>Built a native macOS app shell around yt-dlp — the powerful open-source video
-      downloader that handles YouTube and hundreds of other sites. The app wraps the
-      command-line tool in a clean interface so I don't have to remember flags every
-      time. Under the hood it's still yt-dlp doing the heavy lifting; the app just
-      makes it feel like something I actually want to use.</p>
-      <img class="pic" src="photos/monkey-icon.jpg" alt="yt-dlp app — dock icon">
+      <div class="side-by-side">
+        <img src="photos/monkey-icon.jpg" alt="yt-dlp app — dock icon">
+        <div>
+          <p>Built a native macOS app shell around yt-dlp — the powerful open-source video
+          downloader that handles YouTube and hundreds of other sites. Wraps the CLI in a
+          clean GUI so there's no terminal or flags required.</p>
+          <ul>
+            <li>Paste a URL, pick a format, and download — no command line needed</li>
+            <li>Wraps yt-dlp's full power in a friendly macOS interface</li>
+            <li>Built entirely with Hermes agent — dogfooding at its finest</li>
+            <li>Open source on GitHub — <a href="https://github.com/rstephens11-ux/lazy-downloader">rstephens11-ux/lazy-downloader</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="specs">
         <div><span class="k">Built with</span><span class="v">Hermes agent</span></div>
         <div><span class="k">Wrapper for</span><span class="v"><a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a></span></div>
         <div><span class="k">Platform</span><span class="v">macOS</span></div>
-        <div><span class="k">Status</span><span class="v">Working</span></div>
+        <div><span class="k">Source</span><span class="v"><a href="https://github.com/rstephens11-ux/lazy-downloader">GitHub</a></span></div>
       </div>
     </article>
 
-    <article class="project p-lime rv" id="garden">
+<article class="project p-lime rv" data-date="ongoing" data-category="seasonal" id="garden">
       <div class="p-head">
         <span class="no">03</span>
         <h2>The Garden</h2>

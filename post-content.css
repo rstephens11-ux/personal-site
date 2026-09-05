@@ -1,0 +1,16 @@
+/* Only loaded by Wood Projects and Other Jawnz for imported live post features. */
+[data-post-list] .filter-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 22px;padding:14px;background:var(--panel);border:1px solid var(--faint)}
+[data-post-list] .filter-bar button{font:12px var(--mono);letter-spacing:.025em;min-height:44px;padding:7px 12px;color:var(--green);background:var(--panel2);border:1px solid var(--faint);cursor:pointer}
+[data-post-list] .filter-bar button:hover,[data-post-list] .filter-bar button.active{color:var(--white);border-color:var(--cyan);background:var(--bg)}
+[data-post-list] .filter-bar button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+[data-post-list] .filter-bar .sep{align-self:stretch;border-left:1px solid var(--faint);margin:3px}
+[data-post-list] .record[hidden]{display:none!important}
+[data-post-list] .record .r-head h3{min-width:0;flex:1 1 240px;overflow-wrap:anywhere}
+[data-post-list] .record .body a{color:var(--cyan);text-underline-offset:3px;overflow-wrap:anywhere}
+[data-post-list] .record .body a:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+[data-post-list] .side-by-side{display:grid;grid-template-columns:120px minmax(0,1fr);gap:22px;align-items:start;margin:0 0 18px}
+[data-post-list] .side-by-side>img{width:120px;max-width:100%;height:auto;display:block}
+[data-post-list] .side-by-side ul{padding-left:20px;line-height:1.85;color:var(--green);font-size:.9rem}
+[data-post-list] .side-by-side li+li{margin-top:5px}
+[data-post-list] .spec .v{overflow-wrap:anywhere}
+@media(max-width:540px){[data-post-list] .side-by-side{grid-template-columns:1fr;gap:16px}[data-post-list] .record .r-head h3{flex-basis:180px}[data-post-list] .filter-bar{padding:10px;gap:6px}}

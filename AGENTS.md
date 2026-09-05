@@ -1,53 +1,31 @@
 # Ryan Stephens — Personal Site
 
-Hand-coded static website. No frameworks, no build step, no trackers.
-Deployed via **GitHub Pages** from the `rstephens11-ux/personal-site` repo.
-Domain `ryanmichaelstephens.com` (CNAME file in this repo), DNS at NameSilo.
+Hand-coded static HTML/CSS/JS, no framework or build step. GitHub Pages deploys `main` from `rstephens11-ux/personal-site` at `ryanmichaelstephens.com`; CNAME and NameSilo DNS already configured.
 
-## Voice & tone (non-negotiable)
+## Voice
+Ryan's spelling, jokes, and self-deprecating copy are intentional. Never polish or professionalize unless explicitly asked. Check on-disk saves before debugging deployment; stale VS Code buffers can undo external edits.
 
-Ryan's copy is deliberately self-deprecating and unpolished ("cold af"). That is
-the charm. **Never polish, professionalize, or "improve" his wording** unless he
-explicitly asks. His voice is the product.
+## Design / scope
+Current design is the approved PS1/retro mock: coastal Tacoma intro, house navigation, workshop/garden/lab backdrops, About monitor, Now wood noticeboard. The old minimal classic design is preserved at Git tag `classic-pre-ps1-2026-09-05`; do not reapply its old "never neon" rule to this design.
 
-## Design
+Make one requested change at a time. Moving an object preserves its size and all unrelated properties. No paid generation without approved scope/cost. Keep background source originals outside publication; do not publish generation scripts, .checks/, raw prompts, credentials or local backup folders.
 
-Typography-first minimal dark with muted, earthed accents — rust / slate / moss /
-ochre. **Never neon.** Subtle motion only. Restraint, not costumes.
+## Files
+- index.html: coastal road/Tacoma portal → home.html (no scroll).
+- home.html: house SVG hotspots, truck pull-in (no scroll). Source-coordinate overlay tracks CSS cover crop; short landscape screens use an adjusted vertical crop. Normal portrait calibration is preserved.
+- projects.html / other.html: article.record posts, data-date/category + post-controls.js filters.
+- gardening.html: PS1 garden background and notes; no floating bed illustration.
+- about.html + about-monitor.css: existing biography inside an internally scrolling CRT frame.
+- now.html + now-noticeboard.css: four parchment status notes, dated header.
+- style.css/scripts.js shared; page-local styles take precedence.
+- photos/: original project photos. See README.md for full inventory.
 
-## File map
+Navigation names: WOOD / JAWNZ / GARDENING / ABOUT / NOW / CONTACT.
+Contact uses mailto:hi@ryanmichaelstephens.com (old index.html#contact no longer exists).
 
-| File | What it is |
-|---|---|
-| `index.html` | Home: hero + coast line, projects index, about split, contact |
-| `projects.html` | Wood Projects — expanded with spec tables |
-| `other.html` | "Other Jawnz" |
-| `about.html` | Bio, the creed, favorite places |
-| `now.html` | What Ryan is doing now (hand-updated, has a "Last updated" date) |
-| `style.css` | All styling; colors at the top in `:root` |
-| `scripts.js` | Marquee loop, scroll reveals, local-time clock |
+## Workflow
+`~/personal-site/` is authoritative after launch. `~/personal-site-mock-terminal/` is the retained mock/QA workspace, not auto-synced.
+Before publishing: inspect git status/diff, test local links/fragments/media, phone and desktop layouts, home hotspots, About internal scrolling, post filters. No credentials or unrelated files in commits. Push only intended files and read back the actual live pages; a push alone is not verification.
 
-Nav: **Wood Projects / Other Jawnz / About / Now / Contact**.
-Contact email: `hi@ryanmichaelstephens.com`.
-
-## Editing conventions
-
-- Every editable region is marked with a comment starting `✏️ EDIT` — search any
-  file for `✏️` to find them.
-- To add a project to the home page, copy one whole `<a class="work …">…</a>`
-  block and change the words. The `w-coral` / `w-sky` / `w-lime` / `w-gold`
-  class picks the color.
-- To add a project page entry, copy one whole `<article class="project …">`
-  block in `projects.html`, change words + `id` (any short word, no spaces).
-
-## Workflow with Ryan
-
-- Ryan edits files himself in VS Code, then asks me to **commit + push + verify**
-  ("I made updates, add them to the site"). He handles wording/saving; I handle
-  git + structure checks + live confirmation.
-- **His #1 gotcha: he forgets to save (⌘S) in VS Code, then asks why the site
-  didn't update.** Check the file on disk first — before assuming a bug or a
-  broken deploy.
-- Deploy = push to `main`; GitHub Pages serves it. After pushing, verify live at
-  https://ryanmichaelstephens.com — don't claim "live" until the page actually
-  reflects the change.
+Classic archive/history backup: `~/personal-site-backups/classic-pre-ps1-2026-09-05/`.
+Future integrated theme switch remains queued; content should eventually be shared once, not manually duplicated forever.

@@ -1,0 +1,42 @@
+/* Wood Projects only. Shared scene pages and project content remain untouched. */
+body.wood-projects{
+  --bg:#15130f;--panel:rgba(22,22,18,.94);--panel2:rgba(44,41,33,.94);
+  --green:#d8d2bd;--white:#f1ead7;--dim:#bcb49e;--faint:#635b48;
+  --coral:#c18d73;--lime:#a6b083;--ochre:#c9ac72;--sky:#9aafae;
+  --cyan:#c1d0ca;--amber:#e0c18d;--gold:#c9ac72;
+  background:var(--bg);color:var(--green);isolation:isolate;
+}
+.workshop-background{position:fixed;inset:0;z-index:-1;pointer-events:none;background:url('workshop-ps1.webp') center center/cover no-repeat}
+.workshop-background::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,13,10,.14),rgba(15,13,10,.1) 40%,rgba(15,13,10,.52) 85%,rgba(15,13,10,.68))}
+.wood-projects .bar{background:rgba(22,21,17,.95);border-color:#807055;box-shadow:none}
+.wood-projects .nav a{color:#d2cbb8}
+.wood-projects .nav a.here{border-color:#c9ac72;background:rgba(201,172,114,.12);color:#f1ead7}
+.wood-projects .nav a:hover{color:#fff1ce;border-color:#a99a7b}
+.wood-projects a:focus-visible{outline:2px solid #e0c18d;outline-offset:4px}
+.wood-projects .bar .c-amber{color:#e0c18d}
+.wood-projects .wrap{animation:none}
+.wood-projects .page{padding-top:0;max-width:1060px}
+.wood-projects .page-head{min-height:65vh;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:3rem 0 2rem;margin-bottom:1rem}
+.wood-projects .page-head h1{font-family:var(--pix);font-weight:400;max-width:16ch;line-height:1.05;font-size:clamp(2.8rem,6.4vw,4.7rem);color:#f5ecd9;text-shadow:0 2px 3px #17140e,0 0 18px #17140e}
+.wood-projects .page-head h1 em{color:#e0c18d}
+.wood-projects .page-head .kicker{background:rgba(20,18,13,.9);color:#e2c997;padding:.35rem .7rem;margin-bottom:1rem;border-left:2px solid #b69b67}
+.wood-projects .page-head .dot{background:#b7bc91;box-shadow:none}
+.wood-projects .page-head .lede{background:rgba(20,18,13,.91);color:#e8e0cb;padding:.85rem 1rem;max-width:60ch;border-left:2px solid #887c61;text-shadow:none}
+.wood-projects .record{box-shadow:0 5px 16px rgba(0,0,0,.3);opacity:1;transform:none}
+.wood-projects .record .r-head{background:rgba(43,40,32,.96);flex-wrap:wrap}
+.wood-projects .record h3{color:#eee3c9;text-shadow:none}
+.wood-projects .record .body p{color:#ddd7c7}
+.wood-projects .record .tag{color:#c8bda2}
+.wood-projects .screen{background:#171611;border-color:#524b3c}
+.wood-projects .screen img{filter:none}
+.wood-projects .screen figure::after{display:none}
+.wood-projects .spec .v{color:#e1d8bf}
+.wood-projects footer{background:rgba(20,18,13,.94);color:#c7bda7}
+@media(max-width:640px){
+  .wood-projects .page{padding-left:1rem;padding-right:1rem}
+  .wood-projects .page-head{min-height:65vh;padding-top:3rem}
+  .wood-projects .record .r-head{gap:.5rem}
+  .wood-projects .record .tag{flex-basis:100%;text-align:left;margin-left:0}
+  .wood-projects .specs{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .wood-projects .screen{grid-template-columns:repeat(auto-fit,minmax(125px,1fr))}
+}

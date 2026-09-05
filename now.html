@@ -3,89 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Now — Ryan Stephens</title>
-<meta name="description" content="What Ryan Stephens is doing now — updated when it changes, not before.">
+<title>NOW :: RYAN.STEPHENS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-
+<link rel="stylesheet" href="now-noticeboard.css">
+<meta name="description" content="What Ryan Stephens is doing now — updated when it changes, not before.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 </head>
-<body>
-<div class="ambient"></div>
+<body class="noticeboard-page">
+<div class="noticeboard-setting" aria-hidden="true"></div>
+<div class="scanlines"></div>
 <div class="grain"></div>
+<div class="vignette"></div>
+<div class="wrap">
 
-<header>
-  <a class="wordmark" href="index.html">Ryan Stephens <i>— guy</i></a>
-  <nav>
-    <a href="projects.html">Wood Projects</a>
-    <a href="other.html">Other Jawnz</a>
-    <a href="about.html">About</a>
-    <a href="now.html" class="here">Now</a>
-    <a href="index.html#contact">Contact</a>
+<header class="bar">
+  <a class="wordmark" href="home.html"><b>RYAN.STEPHENS</b><span class="c-dim">:: GUY</span></a>
+  <nav class="nav">
+    <a href="projects.html">WOOD</a>
+    <a href="other.html">JAWNZ</a>
+    <a href="gardening.html">GARDENING</a>
+    <a href="about.html">ABOUT</a>
+    <a href="now.html" class="here">NOW</a>
+    <a href="mailto:hi@ryanmichaelstephens.com">CONTACT</a>
   </nav>
+  <span class="seg c-dim">MIDCOAST.MAINE <span class="c-amber">43.9N 69.6W</span> <span id="clock" class="c-amber">--:--:--</span><span class="blink">▌</span></span>
 </header>
 
 <main class="page">
   <div class="page-head">
-    <div class="kicker"><span class="dot"></span>Status: alive &amp; thriving</div>
-    <h1>What I'm doing <em class="c-gold">now.</em></h1>
-    <!-- ✏️ EDIT: change this date whenever you update the page -->
-    <div class="updated">Last updated — <b>August 25, 2026</b>, from the couch, Midcoast ME</div>
-    <p class="what">Not a feed, not a bio — just what has my attention this season.
-    Updated when it changes, which is slower than the internet would like.</p>
+    <div class="kicker"><span class="dot"></span>STATUS: ALIVE &amp; THRIVING</div>
+    <h1>What I'm doing <em>now.</em></h1>
+    <div class="updated">LAST UPDATED — <span class="c-amber">AUGUST 25, 2026</span>, FROM THE COUCH, MIDCOAST ME</div>
+    <p class="lede">Not a feed, not a bio — just what has my attention this season. Updated when it changes, which is slower than the internet would like.</p>
   </div>
 
-  <!-- ✏️ EDIT: to add an entry, copy one whole <div class="now ..."> block.
-       The class c-coral / c-sky / c-lime / c-gold / c-dim sets its color. -->
-  <div class="now-list">
-    <div class="now c-coral rv rv-d1">
-      <div class="label">Building</div>
-      <div>
-        <h2>Tool Chest</h2>
-        <p>Not as much progress as I'd care to admit.
-        Next: <b>Everything</b>, but getting the wood. </p>
-      </div>
-    </div>
+  <div class="nowline nc-coral rv">
+    <div class="label">Building</div>
+    <div><h3>Tool Chest</h3><p>Not as much progress as I'd care to admit. Next: <b>Everything</b>, but getting the wood.</p></div>
+  </div>
 
+  <div class="nowline nc-gold rv">
+    <div class="label">Growing</div>
+    <div><h3>Tomatoes, at war</h3><p>Score stands <b>14–2</b> against some giant caterpillars. August is the good month: lots of tomatos everyday to replace the blueberrys.</p></div>
+  </div>
 
-    <div class="now c-gold rv rv-d4">
-      <div class="label">Growing</div>
-      <div>
-        <h2>Tomatoes, at war</h2>
-        <p>Score stands <b>14–2</b> against some giant caterpillars. August is the good month:
-        lots of tomatos everyday to replace the blueberrys.</p>
-      </div>
-    </div>
+  <div class="nowline nc-dim rv">
+    <div class="label">Reading</div>
+    <div><h3>Icarus Fallen</h3><p>Interesting philosophical read, where us humans are the the ones learning to cope in after the metaphorical fall.</p></div>
+  </div>
 
-    <div class="now c-dim rv rv-d5">
-      <div class="label">Reading</div>
-      <div>
-        <h2>Icarus Fallen</h2>
-        <p>Interesting philosophical read, where us humans are the the ones learning to cope in after the metaphorical fall.</p>
-      </div>
-    </div>
-
-    <div class="now c-sky rv rv-d6">
-      <div class="label">Water temperature</div>
-      <div>
-        <h2>Cold af</h2>
-        <p>The Maine Coast remains at its annual temperature of "reset your whole nervous system."
-        Going in anyway, <b>as is the custom.</b></p>
-      </div>
-    </div>
+  <div class="nowline nc-sky rv">
+    <div class="label">Water temperature</div>
+    <div><h3>Cold af</h3><p>The Maine Coast remains at its annual temperature of "reset your whole nervous system." Going in anyway, <b>as is the custom.</b></p></div>
   </div>
 </main>
 
 <footer>
-  <span>© 2026 Ryan Stephens</span>
-  <span><a href="index.html">← Back to the index</a></span>
+  <span>© 2026 RYAN STEPHENS</span>
+  <span><a href="home.html" style="color:var(--dim)">← BACK TO INDEX</a></span>
 </footer>
 
+</div>
 <script src="scripts.js"></script>
 </body>
 </html>

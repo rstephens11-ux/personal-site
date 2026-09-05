@@ -3,56 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — Ryan Stephens</title>
-<meta name="description" content="Aspiring Gentleman Farmer — on Midcoast Maine.">
+<title>ABOUT :: RYAN.STEPHENS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-
+<link rel="stylesheet" href="about-monitor.css">
+<link rel="preload" href="ai-lab-ps1.webp" as="image">
+<meta name="description" content="Aspiring Gentleman Farmer — on Midcoast Maine.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 </head>
-<body>
-<div class="ambient"></div>
-<div class="grain"></div>
+<body class="about-monitor">
+<div class="lab-room" aria-hidden="true"></div>
+<div class="monitor-stage">
+  <div class="monitor-toolbar">
+    <a class="back-to-lab" href="other.html" aria-label="Back to lab">← BACK TO LAB</a>
+    <span>ABOUT / OPERATOR FILE</span>
+  </div>
+  <div class="monitor-shell">
+    <div class="monitor-glass">
+      <div class="terminal-scroll" role="region" aria-label="About terminal" tabindex="0">
+<div class="wrap">
 
-<header>
-  <a class="wordmark" href="index.html">Ryan Stephens <i>— guy</i></a>
-  <nav>
-    <a href="projects.html">Wood Projects</a>
-    <a href="other.html">Other Jawnz</a>
-    <a href="about.html" class="here">About</a>
-    <a href="now.html">Now</a>
-    <a href="index.html#contact">Contact</a>
+<header class="bar">
+  <a class="wordmark" href="home.html"><b>RYAN.STEPHENS</b><span class="c-dim">:: GUY</span></a>
+  <nav class="nav">
+    <a href="projects.html">WOOD</a>
+    <a href="other.html">JAWNZ</a>
+    <a href="gardening.html">GARDENING</a>
+    <a href="about.html" class="here">ABOUT</a>
+    <a href="now.html">NOW</a>
+    <a href="mailto:hi@ryanmichaelstephens.com">CONTACT</a>
   </nav>
+  <span class="seg c-dim">MIDCOAST.MAINE <span class="c-amber">43.9N 69.6W</span> <span id="clock" class="c-amber">--:--:--</span><span class="blink">▌</span></span>
 </header>
 
 <main class="page">
   <div class="page-head">
-    <div class="kicker"><span class="dot"></span>The person</div>
-    <h1>The guy over <em class="c-sky">there</em></h1>
+    <div class="kicker"><span class="dot"></span>THE PERSON</div>
+    <h1>The guy over <em>there</em></h1>
   </div>
 
-  <!-- ✏️ EDIT: this is your bio. Say it out loud first, then type that. -->
-  <div class="bio rv">
-    <p>Ryan Stephens lives with his Wife, small son, large dog, & angry cat on Midcoast Maine —  </p>
-    <p>By daylight: the keyboard. mostly Excel.  By lamplight: Gardening, AI Projects, Woodworking, Reading</p>
-    <p>He is not on social media. <b>This page is the whole internet presence.</b>
-    It loads fast, tracks nothing, is maintained by me, and will still open in a plain text editor in
-    twenty years — which is also the entire point.</p>
+  <div class="panel">
+    <div class="ptitle"><span>OPERATOR FILE // RYAN.STEPHENS</span><span>read-only</span></div>
+    <div class="boot" style="padding:1.2rem 1.1rem">
+      <div class="l sys">$ cat /etc/operator</div>
+      <div class="l">Ryan Stephens lives with his Wife, small son, large dog, &amp; angry cat on Midcoast Maine —  </div>
+      <div class="l">By daylight: the keyboard. mostly Excel.  By lamplight: Gardening, AI Projects, Woodworking, Reading</div>
+      <div class="l sys">$ ping socials</div>
+      <div class="l" style="color:var(--red)">He is not on social media. <b>This page is the whole internet presence.</b>
+</div>
+      <div class="l sys">$ uptime --guarantee</div>
+      <div class="l">It loads fast, tracks nothing, is maintained by me, and will still open in a plain text editor in
+    twenty years — which is also the entire point.</div>
+      <div class="l sys">$ _</div>
+    </div>
   </div>
 
-  <div class="creed rv rv-d1">
-    <blockquote>“I need to <span>think of something to put here.”</span></blockquote>
+  <div class="quote rv">
+    <div class="big">“I need to <span class="hl">think of something to put here.”</span></div>
     <cite>— wasnt ready for this to work</cite>
   </div>
 
-  <!-- ✏️ EDIT: favorite places, one <div class="place"> per spot -->
-  <div class="places rv rv-d2">
-    <h2>Where to find him (time permitting)</h2>
+  <div class="kicker rv">Where to find him (time permitting)</div>
+  <div class="places rv">
     <div class="place">
       <h3>Pemaquid Beach</h3>
       <p>Where the Atlantic keeps its honest temperature. Goes in anyway, as is the custom.</p>
@@ -69,10 +84,21 @@
 </main>
 
 <footer>
-  <span>© 2026 Ryan Stephens</span>
-  <span><a href="index.html">← Back to the index</a></span>
+  <span>© 2026 RYAN STEPHENS</span>
+  <span><a href="home.html" style="color:var(--dim)">← BACK TO INDEX</a></span>
 </footer>
 
+</div>
+      </div>
+    </div>
+    <div class="monitor-chin" aria-hidden="true">
+      <span>RYAN.STEPHENS</span>
+      <span class="monitor-vents"></span>
+      <span class="monitor-power"><i></i> POWER</span>
+    </div>
+  </div>
+  <div class="monitor-stand" aria-hidden="true"></div>
+</div>
 <script src="scripts.js"></script>
 </body>
 </html>

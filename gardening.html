@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GARDENING :: RYAN.STEPHENS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  body{background:#111810;color:#e1e3d7;isolation:isolate}
+  body::before{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(12,20,14,.25),rgba(12,20,14,.26) 35%,rgba(12,20,14,.62) 80%,rgba(12,20,14,.76)),url('garden-ps1.webp') center 52%/cover no-repeat}
+  .garden-page{max-width:1060px;margin:0 auto;padding:clamp(24px,5vw,60px)}
+  .garden-nav{display:flex;justify-content:space-between;gap:20px;align-items:center;padding-bottom:24px;border-bottom:1px solid #56604a;font-family:var(--pix);font-size:22px}
+  .garden-nav a{color:#d9dec9;text-decoration:none}
+  .garden-nav a:hover,.garden-nav a:focus-visible{color:#e8c764;text-decoration:underline;text-underline-offset:5px}
+  .garden-nav a:focus-visible{outline:2px solid #e8c764;outline-offset:6px}
+  .garden-nav span{color:#9fba92;font-size:17px;letter-spacing:.1em}
+  .garden-intro{display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:24px;padding:42px 0 28px}
+  .garden-intro h1{font-family:var(--pix);font-size:clamp(56px,8vw,90px);font-weight:400;line-height:1;color:#e8c764;margin:12px 0 20px}
+  .garden-eyebrow{font-size:11px;letter-spacing:.18em;color:#b5c9aa}
+  .garden-crops{font-family:var(--pix);font-size:24px;color:#e1e3d7;line-height:1.5}
+  .garden-art{width:100%;max-width:480px;height:auto;display:block;filter:drop-shadow(0 14px 15px rgba(0,0,0,.35));image-rendering:auto}
+  .garden-note{max-width:720px;padding:28px;border:1px solid #56604a;border-left:3px solid #a3b771;background:rgba(12,20,14,.84);box-shadow:4px 4px 0 rgba(0,0,0,.24)}
+  .garden-note h2{font-family:var(--pix);font-size:32px;font-weight:400;color:#d9dfbe;margin:8px 0 14px}
+  .garden-note p{font-size:13px;line-height:1.9;color:#e1e3d7}
+  .garden-note .note-date{font-size:10px;letter-spacing:.12em;color:#a9b898}
+  .garden-footer{font:16px var(--pix);color:#8e9e80;padding:32px 0 0}
+  @media(max-width:640px){.garden-intro{grid-template-columns:1fr;padding-top:32px;gap:14px}.garden-art{max-width:330px;justify-self:center}.garden-note{padding:20px}.garden-nav{font-size:20px}.garden-nav span{font-size:14px}}
+  /* This page's garden photo conversion; other pages and original artwork stay untouched. */
+  .garden-nav{background:rgba(12,20,14,.9);padding:14px 18px;border:1px solid #657151}
+  .garden-nav span{color:#bccca4}
+  .garden-intro{min-height:58vh;align-items:end;padding-top:clamp(80px,16vh,180px)}
+  .garden-intro>div{background:rgba(12,20,14,.88);padding:22px;border-left:3px solid #a3b771}
+  .garden-intro h1{font-size:clamp(52px,7vw,78px)}
+  .garden-art{max-width:300px;justify-self:end;filter:drop-shadow(0 8px 10px rgba(0,0,0,.55))}
+  .garden-note{background:rgba(12,20,14,.94)}
+  .garden-footer{color:#bec9b0;text-shadow:0 1px 3px #000}
+  @media(max-width:700px){.garden-intro{grid-template-columns:1fr;min-height:0;gap:16px;padding-top:100px}.garden-intro>div{max-width:420px}.garden-art{max-width:190px;justify-self:end}.garden-nav{gap:12px;padding:12px}.garden-nav span{font-size:14px}.garden-intro h1{font-size:56px}}
+  /* Shared navigation layout, with this page's existing moss/ochre palette. */
+  .bar{background:rgba(12,20,14,.96);border-color:#657151;box-shadow:none}
+  .bar .wordmark,.bar .wordmark b{color:#e1e3d7}
+  .bar .c-dim,.bar .nav a{color:#bdc9ad}
+  .bar .c-amber{color:#e8c764}
+  .bar .nav a.here{color:#f0e6b4;border-color:#b9c486;background:rgba(163,183,113,.12)}
+  .bar .nav a:hover{color:#e8c764;border-color:#a3b771}
+  .bar a:focus-visible{outline:2px solid #e8c764;outline-offset:4px}
+</style>
+<meta name="description" content="Gardening notes from Ryan Stephens on Midcoast Maine.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+</head>
+<body>
+<div class="scanlines" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<header class="bar">
+  <a class="wordmark" href="home.html" aria-label="Back to the house"><b>RYAN.STEPHENS</b><span class="c-dim">:: GUY</span></a>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="projects.html">WOOD</a>
+    <a href="other.html">JAWNZ</a>
+    <a href="gardening.html" class="here" aria-current="page">GARDENING</a>
+    <a href="about.html">ABOUT</a>
+    <a href="now.html">NOW</a>
+    <a href="mailto:hi@ryanmichaelstephens.com">CONTACT</a>
+  </nav>
+  <span class="seg c-dim">MIDCOAST.MAINE <span class="c-amber">43.9N 69.6W</span> <span id="clock" class="c-amber">--:--:--</span><span class="blink">▌</span></span>
+</header>
+<div class="garden-page">
+  <main>
+    <section class="garden-intro" aria-labelledby="garden-title">
+      <div>
+        <p class="garden-eyebrow">RYAN STEPHENS · MAINE</p>
+        <h1 id="garden-title">Gardening</h1>
+        <p class="garden-crops">Corn / Tomatoes / Sunflowers</p>
+      </div>
+    </section>
+    <section class="garden-note" aria-labelledby="note-title">
+      <!-- Existing note copied verbatim from now.html; not a newly claimed garden update. -->
+      <p class="note-date">FROM THE NOW PAGE · AUGUST 25, 2026</p>
+      <h2 id="note-title">Tomatoes, at war</h2>
+      <!-- ✏️ EDIT: Replace this note or add new dated garden notes below. -->
+      <p>Score stands <b>14–2</b> against some giant caterpillars. August is the good month: lots of tomatos everyday to replace the blueberrys.</p>
+    </section>
+  </main>
+  <div class="garden-footer">RYAN.STEPHENS / GARDENING</div>
+</div>
+<script src="scripts.js"></script>
+</body>
+</html>

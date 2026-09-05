@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RYAN.STEPHENS :: GUY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  body{overflow:hidden;height:100vh}
+  .hero{min-height:100vh}
+  .bg-house{
+    -webkit-mask-image:linear-gradient(to bottom, #000 0%, #000 88%, transparent 100%);
+    mask-image:linear-gradient(to bottom, #000 0%, #000 88%, transparent 100%);
+  }
+  /* Home-only hotspot. Geometry follows the source image's cover crop. */
+  .house-hotspots{position:absolute;z-index:2;pointer-events:none;overflow:visible}
+  .garage-link{outline:none}
+  .garage-link path{pointer-events:all;cursor:pointer;fill:transparent;stroke:transparent;stroke-width:1.5;vector-effect:non-scaling-stroke;transition:fill .12s,stroke .12s}
+  .garage-link text{pointer-events:none;opacity:0;fill:#f8f8ff;stroke:#111;stroke-width:3;paint-order:stroke;font:22px 'VT323',monospace;text-anchor:middle;transition:opacity .12s}
+  .garage-link:hover path,.garage-link:focus-visible path{fill:rgba(109,146,164,.16);stroke:#c5e4eb}
+  .garage-link:hover text,.garage-link:focus-visible text{opacity:1}
+  .mailbox-link image{pointer-events:none}
+</style>
+<meta name="description" content="Explore Ryan Stephens’s projects, garden, and current work.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+</head>
+<body>
+<div class="fade-in" id="fadein"></div>
+<div class="scanlines"></div>
+<div class="grain"></div>
+<div class="vignette"></div>
+<div class="wrap">
+
+<section class="hero" id="top">
+  <div class="bg-house" aria-hidden="true"></div>
+  <!-- Coordinates refer to house-hero.png (1505 x 1872); the unobstructed left bay. -->
+  <svg class="house-hotspots" viewBox="0 0 1505 1872" width="1505" height="1872">
+    <a class="garage-link" href="projects.html" aria-label="Wood Projects" tabindex="0">
+      <path d="M880 1170 L980 1167 L980 1256 L880 1250 Z"/>
+      <text x="930" y="1149" aria-hidden="true">Wood Projects</text>
+    </a>
+    <a class="garage-link front-door-link" href="about.html" aria-label="About" tabindex="0">
+      <path d="M806 1157 L832 1157 L832 1238 L806 1234 Z"/>
+      <text x="819" y="1142" aria-hidden="true">About</text>
+    </a>
+    <a class="garage-link window-link" href="other.html" aria-label="Other Jawnz" tabindex="0">
+      <path d="M941 1019 L974 1019 L974 1094 L941 1094 Z"/>
+      <path class="large-window-hit" d="M1026 1014 L1163 997 L1163 1074 L1026 1084 Z"/>
+      <text x="958" y="1000" aria-hidden="true">Other Jawnz</text>
+    </a>
+    <a class="garage-link mailbox-link" href="mailto:hi@ryanmichaelstephens.com" aria-label="Contact me" tabindex="0">
+      <ellipse cx="653" cy="1441" rx="21" ry="4" fill="#171b19" opacity=".24" pointer-events="none"/>
+      <image href="mailbox-sprite.png" x="608" y="1256" width="100" height="183" aria-hidden="true"/>
+      <path d="M608 1256 L708 1256 L708 1350 L676 1350 L674 1439 L648 1439 L648 1350 L608 1350 Z"/>
+      <text x="658" y="1241" aria-hidden="true">Contact me</text>
+    </a>
+    <a class="garage-link garden-link" href="gardening.html" aria-label="Gardening" tabindex="0">
+      <ellipse cx="515" cy="1437" rx="95" ry="12" fill="#182214" opacity=".24" pointer-events="none"/>
+      <image href="garden-bed-sprite.png" x="400" y="1225" width="225" height="225" aria-hidden="true" style="pointer-events:all;cursor:pointer"/>
+      <path d="M400 1378 L582 1360 L625 1390 L625 1423 L461 1450 L400 1417 Z"/>
+      <text x="512" y="1206" aria-hidden="true">Gardening</text>
+    </a>
+    <a class="garage-link now-link" href="now.html" aria-label="Now" tabindex="0">
+      <g pointer-events="none" aria-hidden="true">
+        <polygon points="843,1177 871,1175 871,1218 843,1220" fill="#252820"/>
+        <polygon points="841,1175 869,1173 869,1216 841,1218" fill="#746650"/>
+        <polygon points="845,1180 865,1178 865,1211 845,1213" fill="#c6c0a0"/>
+        <line x1="849" y1="1186" x2="861" y2="1185" stroke="#645e49" stroke-width="2"/>
+        <line x1="849" y1="1193" x2="861" y2="1192" stroke="#79735c" stroke-width="1.5"/>
+        <line x1="849" y1="1199" x2="859" y2="1198" stroke="#79735c" stroke-width="1.5"/>
+        <rect x="853" y="1181" width="3" height="3" fill="#9b4935"/>
+      </g>
+      <path d="M841 1175 L871 1173 L871 1218 L841 1220 Z"/>
+      <text x="856" y="1158" aria-hidden="true">Now</text>
+    </a>
+  </svg>
+  <div class="arrive"><div class="truck"><img src="hero-truck-family-sprite.png" alt=""></div></div>
+</section>
+
+</div>
+<script src="scripts.js"></script>
+<script>
+(function(){
+  var fade = document.getElementById('fadein');
+  var background = document.querySelector('.bg-house');
+  var hotspots = document.querySelector('.house-hotspots');
+  function alignGarage(){
+    // Same cover scale and center/30% offset as .bg-house; never moves the scene.
+    var w = background.clientWidth, h = background.clientHeight;
+    var scale = Math.max(w / 1505, h / 1872);
+    hotspots.style.width = (1505 * scale) + 'px';
+    hotspots.style.height = (1872 * scale) + 'px';
+    hotspots.style.left = ((w - 1505 * scale) * .5) + 'px';
+    // Short landscape screens must show the front doors and lawn, not just the roof.
+    var positionY = .3;
+    if(h < 600 && w > h && 1872 * scale > h){
+      positionY = Math.min(1, Math.max(.3, (1465 * scale - h) / (1872 * scale - h)));
+    }
+    var offsetY = (h - 1872 * scale) * positionY;
+    background.style.backgroundPosition = 'center ' + (positionY * 100) + '%';
+    hotspots.style.top = offsetY + 'px';
+    // Lower only the mailbox; keep its size and x-position, and prevent bottom clipping.
+    var mailboxBottom = offsetY + 1439 * scale;
+    var mailboxDown = Math.max(0, Math.min(80, h - 8 - mailboxBottom));
+    document.querySelector('.mailbox-link').setAttribute('transform', 'translate(0 ' + (mailboxDown / scale) + ')');
+  }
+  alignGarage();
+  new ResizeObserver(alignGarage).observe(background);
+  if(fade){
+    setTimeout(function(){ fade.classList.add('off'); }, 200);
+    setTimeout(function(){ fade.remove(); }, 800);
+  }
+})();
+</script>
+</body>
+</html>

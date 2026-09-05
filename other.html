@@ -3,120 +3,125 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Other Jawnz — Ryan Stephens</title>
-<meta name="description" content="The non-wood projects: a cartoon, an open-source tool, and a garden at war with a squirrel.">
+<title>OTHER JAWNZ :: RYAN.STEPHENS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="stylesheet" href="other-jawnz.css">
+<link rel="preload" href="ai-lab-ps1.webp" as="image">
+<link rel="stylesheet" href="post-content.css">
+<meta name="description" content="The non-wood projects: a cartoon, an open-source tool, and a garden at war with a squirrel.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 </head>
-<body>
-<div class="ambient"></div>
+<body class="other-jawnz">
+<div class="lab-background" aria-hidden="true"></div>
+<div class="scanlines"></div>
 <div class="grain"></div>
+<div class="vignette"></div>
+<div class="wrap">
 
-<header>
-  <a class="wordmark" href="index.html">Ryan Stephens <i>— guy</i></a>
-  <nav>
-    <a href="projects.html">Wood Projects</a>
-    <a href="other.html" class="here">Other Jawnz</a>
-    <a href="about.html">About</a>
-    <a href="now.html">Now</a>
-    <a href="index.html#contact">Contact</a>
+<header class="bar">
+  <a class="wordmark" href="home.html"><b>RYAN.STEPHENS</b><span class="c-dim">:: GUY</span></a>
+  <nav class="nav">
+    <a href="projects.html">WOOD</a>
+    <a href="other.html" class="here">JAWNZ</a>
+    <a href="gardening.html">GARDENING</a>
+    <a href="about.html">ABOUT</a>
+    <a href="now.html">NOW</a>
+    <a href="mailto:hi@ryanmichaelstephens.com">CONTACT</a>
   </nav>
+  <span class="seg c-dim">MIDCOAST.MAINE <span class="c-amber">43.9N 69.6W</span> <span id="clock" class="c-amber">--:--:--</span><span class="blink">▌</span></span>
 </header>
 
 <main class="page">
-  <div class="page-head">
-    <div class="kicker"><span class="dot"></span>The other stuff</div>
-    <h1>Other <em class="c-sky">jawnz.</em></h1>
-    <p class="lede">Everything that isn't wood — a cartoon, a garden, and whatever
+<div class="page-head">
+<div class="kicker"><span class="dot"></span>THE OTHER STUFF</div>
+<h1>Other <em>jawnz.</em></h1>
+<p class="lede">Everything that isn't wood — a cartoon, a garden, and whatever
     else I'm deep-diving on this month.</p>
-  </div>
+</div>
 
-  <div class="project-list">
-  <div class="filter-bar">
-    <button class="active" data-filter="all">All</button>
-    <button data-sort="newest">Newest</button>
-    <button data-sort="oldest">Oldest</button>
-    <span class="sep"></span>
-    <button data-filter="software">Software</button>
-    <button data-filter="animated-series">Animation</button>
-    <button data-filter="seasonal">Seasonal</button>
-  </div>
 
-    <article class="project p-sky rv" data-date="ongoing" data-category="animated-series" id="cartoon">
-      <div class="p-head">
-        <span class="no">01</span>
-        <h2>Cartoon</h2>
-        <span class="tag">animated series · in development</span>
-      </div>
-      <p>Using hermes agent to stand up a server and rent gpu to download minimax h3 and locally generate videos.</p>
-      <div class="specs">
-        <div><span class="k">Format</span><span class="v">animated series</span></div>
-        <div><span class="k">Theme</span><span class="v">"No Cap"</span></div>
-        <div><span class="k">Status</span><span class="v">Writing the pilot</span></div>
-      </div>
-    </article>
+<div class="project-list" data-post-list>
+<div aria-label="Sort and filter posts" class="filter-bar" role="group">
+<button aria-pressed="true" class="active" data-filter="all" type="button">All</button>
+<button aria-pressed="false" data-sort="newest" type="button">Newest</button>
+<button aria-pressed="false" data-sort="oldest" type="button">Oldest</button>
+<span class="sep"></span>
+<button aria-pressed="false" data-filter="software" type="button">Software</button>
+<button aria-pressed="false" data-filter="animated-series" type="button">Animation</button>
+<button aria-pressed="false" data-filter="seasonal" type="button">Seasonal</button>
+</div>
+<article class="record r-sky rv" data-category="animated-series" data-date="ongoing" id="cartoon"><div class="r-head">
+<span class="no">01</span>
+<h3>Cartoon</h3>
+<span class="tag">animated series · in development</span>
+</div><div class="body">
 
-<article class="project p-gold rv" data-date="2026-08" data-category="software" id="ytdlp-app">
-      <div class="p-head">
-        <span class="no">02</span>
-        <h2>yt-dlp app</h2>
-        <span class="tag">macOS app · open source</span>
-      </div>
-      <div class="side-by-side">
-        <img src="photos/monkey-icon.jpg" alt="yt-dlp app — dock icon">
-        <div>
-          <p>Built a native macOS app shell around yt-dlp — the powerful open-source video
+<p>Using hermes agent to stand up a server and rent gpu to download minimax h3 and locally generate videos.</p>
+<div class="specs">
+<div class="spec"><span class="k">Format</span><span class="v">animated series</span></div>
+<div class="spec"><span class="k">Theme</span><span class="v">"No Cap"</span></div>
+<div class="spec"><span class="k">Status</span><span class="v">Writing the pilot</span></div>
+</div>
+</div></article>
+<article class="record r-gold rv" data-category="software" data-date="2026-08" id="ytdlp-app"><div class="r-head">
+<span class="no">02</span>
+<h3>yt-dlp app</h3>
+<span class="tag">macOS app · open source</span>
+</div><div class="body">
+
+<div class="side-by-side">
+<img alt="yt-dlp app — dock icon" src="photos/monkey-icon.jpg"/>
+<div>
+<p>Built a native macOS app shell around yt-dlp — the powerful open-source video
           downloader that handles YouTube and hundreds of other sites. Wraps the CLI in a
           clean GUI so there's no terminal or flags required.</p>
-          <ul>
-            <li>Paste a URL, pick a format, and download — no command line needed</li>
-            <li>Wraps yt-dlp's full power in a friendly macOS interface</li>
-            <li>Built entirely with Hermes agent — dogfooding at its finest</li>
-            <li>Open source on GitHub — <a href="https://github.com/rstephens11-ux/lazy-downloader">rstephens11-ux/lazy-downloader</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="specs">
-        <div><span class="k">Built with</span><span class="v">Hermes agent</span></div>
-        <div><span class="k">Wrapper for</span><span class="v"><a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a></span></div>
-        <div><span class="k">Platform</span><span class="v">macOS</span></div>
-        <div><span class="k">Source</span><span class="v"><a href="https://github.com/rstephens11-ux/lazy-downloader">GitHub</a></span></div>
-      </div>
-    </article>
+<ul>
+<li>Paste a URL, pick a format, and download — no command line needed</li>
+<li>Wraps yt-dlp's full power in a friendly macOS interface</li>
+<li>Built entirely with Hermes agent — dogfooding at its finest</li>
+<li>Open source on GitHub — <a href="https://github.com/rstephens11-ux/lazy-downloader">rstephens11-ux/lazy-downloader</a></li>
+</ul>
+</div>
+</div>
+<div class="specs">
+<div class="spec"><span class="k">Built with</span><span class="v">Hermes agent</span></div>
+<div class="spec"><span class="k">Wrapper for</span><span class="v"><a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a></span></div>
+<div class="spec"><span class="k">Platform</span><span class="v">macOS</span></div>
+<div class="spec"><span class="k">Source</span><span class="v"><a href="https://github.com/rstephens11-ux/lazy-downloader">GitHub</a></span></div>
+</div>
+</div></article>
+<article class="record r-lime rv" data-category="seasonal" data-date="ongoing" id="garden"><div class="r-head">
+<span class="no">03</span>
+<h3>The Garden</h3>
+<span class="tag">four raised beds · zone 6a</span>
+</div><div class="body">
 
-<article class="project p-lime rv" data-date="ongoing" data-category="seasonal" id="garden">
-      <div class="p-head">
-        <span class="no">03</span>
-        <h2>The Garden</h2>
-        <span class="tag">four raised beds · zone 6a</span>
-      </div>
-      <p>The longest-running project and the only one with an adversary. Four beds of
+<p>The longest-running project and the only one with an adversary. Four beds of
       heirlooms against one bold squirrel; the current score stands <b>14–2</b> in the
       gardener's favor, pending appeal.</p>
-      <p>August is the payoff: most dinners are a tomato eaten standing over the bed,
+<p>August is the payoff: most dinners are a tomato eaten standing over the bed,
       still warm from the sun. <b>10/10</b>, would feud again.</p>
-      <div class="specs">
-        <div><span class="k">Beds</span><span class="v">4, raised</span></div>
-        <div><span class="k">Zone</span><span class="v">6a, coastal</span></div>
-        <div><span class="k">Rival</span><span class="v">One (1) squirrel</span></div>
-        <div><span class="k">Status</span><span class="v">Growing</span></div>
-      </div>
-    </article>
-
-  </div>
+<div class="specs">
+<div class="spec"><span class="k">Beds</span><span class="v">4, raised</span></div>
+<div class="spec"><span class="k">Zone</span><span class="v">6a, coastal</span></div>
+<div class="spec"><span class="k">Rival</span><span class="v">One (1) squirrel</span></div>
+<div class="spec"><span class="k">Status</span><span class="v">Growing</span></div>
+</div>
+</div></article>
+</div>
 </main>
 
 <footer>
-  <span>© 2026 Ryan Stephens</span>
-  <span><a href="index.html">← Back to the index</a></span>
+  <span>© 2026 RYAN STEPHENS</span>
+  <span><a href="home.html" style="color:var(--dim)">← BACK TO INDEX</a></span>
 </footer>
 
+</div>
 <script src="scripts.js"></script>
+<script src="post-controls.js"></script>
 </body>
 </html>

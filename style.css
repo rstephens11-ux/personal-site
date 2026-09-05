@@ -221,6 +221,24 @@ footer .ok{color:var(--green)}
 .backlink{display:inline-block;color:var(--dim);text-decoration:none;font-size:.78rem;letter-spacing:.06em;margin-bottom:2rem}
 .backlink:hover{color:var(--cyan)}
 
+/* Post photo viewer: native modal sits above the scene and CRT overlays. */
+.photo-enlarge{cursor:zoom-in}
+.photo-enlarge:focus-visible{outline:3px solid #e8c764;outline-offset:-3px}
+.photo-viewer{position:fixed;inset:0;margin:auto;width:min(1120px,calc(100vw - 32px));height:min(880px,calc(100dvh - 32px));max-width:none;max-height:none;padding:0;border:1px solid #65716b;background:#080d0b;color:#e1e3d7;box-shadow:0 20px 80px #000;font-family:var(--mono)}
+.photo-viewer[open]{display:flex;flex-direction:column}
+.photo-viewer::backdrop{background:rgba(0,0,0,.9)}
+.photo-viewer-bar,.photo-viewer-footer{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 14px;flex:none}
+.photo-viewer-bar{border-bottom:1px solid #36463a;font-size:13px}
+.photo-viewer button{min-width:48px;min-height:44px;padding:8px 14px;border:1px solid #65716b;background:#142018;color:#e1e3d7;cursor:pointer;font:16px var(--mono)}
+.photo-viewer button:hover{border-color:#e8c764;color:#e8c764}
+.photo-viewer button:focus-visible{outline:2px solid #e8c764;outline-offset:3px}
+.photo-viewer button:disabled{opacity:.3;cursor:default}
+.photo-viewer-stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:8px}
+.photo-viewer-stage img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;touch-action:pan-y pinch-zoom}
+.photo-viewer-footer{border-top:1px solid #36463a}
+.photo-viewer-footer p{font-size:13px;text-align:center;overflow-wrap:anywhere;max-height:15vh;overflow:auto}
+@media(max-width:540px){.photo-viewer{width:100%;height:100dvh;border:0}.photo-viewer-footer,.photo-viewer-bar{gap:10px;padding:10px}.photo-viewer-footer p{font-size:12px}}
+
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .rv{opacity:1;transform:none}

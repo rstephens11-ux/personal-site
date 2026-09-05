@@ -48,7 +48,7 @@ My **own words**, not polished.
             for folder,page in mod.PAGES.items():
                 (root/'_posts'/folder).mkdir(parents=True)
                 (root/page).write_text('before\n'+mod.START+'\nold\n'+mod.END+'\nafter')
-                (root/'_posts'/folder/'01-test.md').write_text('---\nid: test\ntitle: My test\ncategory: general\n---\nMy words.')
+                (root/'_posts'/folder/'01-test.md').write_text('---\nid: test\ntitle: My test\ncategory: books\n---\nMy words.')
             mod.build(root,bootstrap=True)
             page=root/'projects.html';built=page.read_text()
             self.assertTrue(built.startswith('before\n') and built.endswith('\nafter'))
@@ -68,7 +68,7 @@ My **own words**, not polished.
             for folder,page in mod.PAGES.items():
                 (root/'_posts'/folder).mkdir(parents=True)
                 (root/page).write_text(mod.START+'\n'+mod.END)
-                (root/'_posts'/folder/'one.md').write_text('---\nid: test\ntitle: Test\ncategory: general\n---\nMy words.')
+                (root/'_posts'/folder/'one.md').write_text('---\nid: test\ntitle: Test\ncategory: books\n---\nMy words.')
             mod.build(root,bootstrap=True)
             snapshots={page:(root/page).read_bytes() for page in mod.PAGES.values()}
             f=root/'_posts/gardening/one.md';original=f.read_text()

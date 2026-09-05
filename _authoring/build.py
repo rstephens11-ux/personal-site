@@ -13,7 +13,7 @@ from bs4 import BeautifulSoup
 from markdown_it import MarkdownIt
 
 MD = MarkdownIt('commonmark', {'html': False})
-PAGES = {'wood': 'projects.html', 'jawnz': 'other.html', 'gardening': 'gardening.html'}
+PAGES = {'wood': 'projects.html', 'jawnz': 'other.html', 'gardening': 'gardening.html', 'links': 'links.html'}
 START = '<!-- GENERATED POSTS: edit _posts, not this block -->'
 END = '<!-- END GENERATED POSTS -->'
 
@@ -91,6 +91,15 @@ def markdown(text, root, inline=False):
 def render_post(post, root, number):
     e = lambda v: html.escape(str(v), quote=True)
     body = markdown(post['body'], root)
+    destination = post.get('url', '')
+    if destination:
+        parsed = urlsplit(destination)
+        if parsed.scheme not in ('https', 'http') or not parsed.netloc:
+            raise ValueError(f'{post["path"]}: URL must be a full http(s) address')
+        check_url(destination, root)
+        label = {'websites': 'Visit website', 'books': 'View book', 'twitter': 'View Twitter post'}.get(post['category'], 'Visit link')
+        body = f'<p class="collection-source">{e(parsed.netloc)}</p>' + body + f'<p><a class="collection-destination" href="{e(destination)}">{label} ↗</a></p>'
+
     if post.get('layout') == 'side-by-side':
         check_url(post['image'], root, image=True)
         body = f'<div class="side-by-side"><img src="{e(post["image"])}" alt="{e(post.get("image_alt", ""))}"><div>{body}</div></div>'
@@ -124,9 +133,17 @@ def build(root, check=False, bootstrap=False):
         if not check and not bootstrap and filename in state and digest(current) != state[filename]:
             raise ValueError(f'{filename}: generated post HTML was edited directly. Move those changes into _posts first; nothing overwritten.')
         files = sorted((root / '_posts' / folder).glob('*.md'))
-        if not files:
+        if not files and folder != 'links':
             raise ValueError(f'No posts in _posts/{folder}; refusing accidental empty-page build')
         posts = [read_post(p) for p in files]
+        if folder == 'links':
+            for post in posts:
+                if post['category'] not in ('websites', 'books', 'twitter'):
+                    raise ValueError(f'{post["path"]}: use category websites, books, or twitter')
+                if post['category'] in ('websites', 'twitter') and not post.get('url'):
+                    raise ValueError(f'{post["path"]}: this entry needs a URL')
+                post.setdefault('tag', {'websites':'Website', 'books':'Book', 'twitter':'Twitter post'}[post['category']])
+
         posts.sort(key=lambda p: (p.get('order', 0), p['path']))
         ids = [p['id'] for p in posts] + [p['heading_id'] for p in posts if p.get('heading_id')]
         if len(ids) != len(set(ids)):

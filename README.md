@@ -34,16 +34,17 @@ Post text now lives in **`_posts/`**, one `.md` (Markdown/plain-text) file per p
 - `_posts/wood/` → Wood
 - `_posts/jawnz/` → Jawnz
 - `_posts/gardening/` → Gardening
+- `_posts/links/` → Interesting websites, books, and Twitter posts
 
 ### Everyday editing
 1. Open a post `.md` in VS Code. Write below the second `---` line. Blank lines separate paragraphs.
 2. Save with **⌘S**.
-3. Double-click **`Update Preview.command`** in the site folder. It rebuilds all three pages locally and opens Gardening; use the navigation to check Wood/Jawnz. It does **not** publish. A brief Terminal window is normal.
+3. Double-click **`Update Preview.command`** in the site folder. It rebuilds all four collection pages locally and opens Gardening; use the navigation to check Wood/Jawnz/Links. It does **not** publish. A brief Terminal window is normal.
 4. When ready, ask Hermes to publish. Only saved, rebuilt content is published.
 
 If the rebuild fails, an error file opens explaining why. No page is written until every post validates. A missing photo, duplicate ID, or broken details section stops the build rather than silently dropping content.
 
-**Do not edit post text in `projects.html`, `other.html`, or `gardening.html` anymore.** Those post blocks are generated. Navigation, page introductions, About, Now, and Gardening's older standalone tomato note are still edited in HTML. Close your old HTML editor tabs before switching to the `.md` files. The builder detects direct edits inside generated blocks and refuses to erase them.
+**Do not edit post text in `projects.html`, `other.html`, `gardening.html`, or `links.html` anymore.** Those post blocks are generated. Navigation, page introductions, About, Now, and Gardening's older standalone tomato note are still edited in HTML. Close your old HTML editor tabs before switching to the `.md` files. The builder detects direct edits inside generated blocks and refuses to erase them.
 
 ### Plain-text formatting
 
@@ -91,6 +92,29 @@ specs:
 Gardening categories: `building`, `chickens`, `kitchen`, `growing`.
 Wood categories: `joinery`, `carving`, `steam-bending`, `chairmaking`, `greenwoodworking`, `general`.
 Jawnz categories: `software`, `animated-series`, `seasonal`.
+
+### Add an interesting website, book, or Twitter post
+
+The **Links** page opens on Websites, with Everything / Books / Twitter posts filters. It starts empty; test examples are not published recommendations.
+
+1. Copy `_authoring/new-website.md.example` into `_posts/links/` and rename it to something like `my-favourite-site.md` (remove `.example`). Book and Twitter templates sit beside it.
+2. Fill in `title`, a unique permanent `id`, and `url`. Use `category: websites`, `books`, or `twitter`.
+3. Write any notes below the second `---`, save, then double-click Update Preview.command. Open Links from the site navigation.
+
+```markdown
+---
+title: "Website name"
+id: website-name
+category: websites
+url: "https://example.com"
+order: 1
+accent: sky
+---
+
+What I found interesting about it.
+```
+
+Books can omit `url` or leave it empty. To show an author, add `specs:` with an indented `Author: Name`. Twitter posts take the full link to the post, not an embed code. No Twitter scripts, external previews, or tracking widgets are loaded. Destination links open normally in the current tab; Copy link shares your entry on this site, not the external destination.
 
 ### Add a new post
 

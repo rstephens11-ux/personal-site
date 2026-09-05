@@ -1,0 +1,10 @@
+---
+title: "Twitter post title"
+id: my-twitter-link
+category: twitter
+url: "https://x.com/USERNAME/status/POST_ID"
+order: 1
+accent: sky
+---
+
+Your notes go here.

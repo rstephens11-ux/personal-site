@@ -1,0 +1,24 @@
+/* Links only: a quiet bookmark index inside the existing retro world. */
+body.links-page{--bg:#0c151b;--panel:rgba(11,23,30,.96);--panel2:#182b33;--green:#d0dddf;--white:#eef0df;--dim:#a3b8ba;--faint:#435c61;--cyan:#95c5c7;--lime:#97b5a2;--sky:#95c5c7;--ochre:#c6b482;background:var(--bg);color:var(--green);isolation:isolate}
+.links-background{position:fixed;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(6,16,22,.94),rgba(6,16,22,.84)),url('ai-lab-ps1.webp') center/cover no-repeat;pointer-events:none}
+.links-page .bar{background:rgba(10,22,28,.98);border-color:var(--faint);box-shadow:none}
+.links-page .nav a{color:var(--dim)}
+.links-page .nav a.here{color:var(--white);border-color:var(--cyan);background:var(--panel2)}
+.links-main{max-width:1000px;padding-top:64px}
+.links-intro{margin-bottom:32px;max-width:720px}
+.links-intro .kicker{color:var(--cyan);font-size:11px;letter-spacing:.14em}
+.links-intro h1{font:400 clamp(44px,7vw,76px)/1.05 var(--pix);margin:14px 0 20px;color:var(--white)}
+.links-intro h1 em{color:var(--cyan);font-style:normal}
+.links-intro>p{font-size:14px;line-height:1.8;color:var(--dim)}
+.links-list .record .r-head{flex-wrap:wrap}
+.links-list .record .body{line-height:1.85}
+.links-list .record .body .collection-source{font-size:11px;color:var(--dim);letter-spacing:.04em;overflow-wrap:anywhere}
+.links-list .collection-destination{display:inline-flex;align-items:center;min-height:44px;font-size:13px}
+.links-empty{border:1px dashed var(--faint);padding:38px 28px;background:var(--panel)}
+.links-empty[hidden]{display:none}
+.empty-mark{font:32px var(--pix);color:var(--cyan)}
+.links-empty h2{font:400 28px var(--pix);color:var(--white);margin:12px 0 8px}
+.links-empty p{font-size:13px;color:var(--dim)}
+.links-page footer{margin-top:40px}
+.links-page footer a{color:var(--dim);font:17px var(--pix);min-height:44px;display:inline-flex;align-items:center}
+@media(max-width:640px){.links-main{padding:36px 20px 20px}.links-empty{padding:28px 20px}.links-list .record .tag{flex-basis:100%;text-align:left;margin-left:0}}

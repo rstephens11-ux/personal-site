@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="post-content.css">
 <style>
   body{background:#111810;color:#e1e3d7;isolation:isolate}
   body::before{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(12,20,14,.25),rgba(12,20,14,.26) 35%,rgba(12,20,14,.62) 80%,rgba(12,20,14,.76)),url('garden-ps1.webp') center 52%/cover no-repeat}
@@ -35,7 +36,10 @@
   .garden-intro h1{font-size:clamp(52px,7vw,78px)}
   .garden-art{max-width:300px;justify-self:end;filter:drop-shadow(0 8px 10px rgba(0,0,0,.55))}
   .garden-note{background:rgba(12,20,14,.94)}
-  .garden-note + .garden-note{margin-top:24px}
+  .garden-posts{margin-top:28px;--panel:rgba(12,20,14,.94);--panel2:#152219;--bg:#111810;--faint:#56604a;--green:#e1e3d7;--white:#d9dfbe;--dim:#a9b898;--cyan:#e8c764;--lime:#a3b771}
+  .garden-posts .r-head{flex-wrap:wrap}
+  .garden-posts .record h3{font-size:32px}
+  .garden-posts .body{line-height:1.9}
   .garden-footer{color:#bec9b0;text-shadow:0 1px 3px #000}
   @media(max-width:700px){.garden-intro{grid-template-columns:1fr;min-height:0;gap:16px;padding-top:100px}.garden-intro>div{max-width:420px}.garden-art{max-width:190px;justify-self:end}.garden-nav{gap:12px;padding:12px}.garden-nav span{font-size:14px}.garden-intro h1{font-size:56px}}
   /* Shared navigation layout, with this page's existing moss/ochre palette. */
@@ -84,28 +88,147 @@
       <!-- ✏️ EDIT: Replace this note or add new dated garden notes below. -->
       <p>Score stands <b>14–2</b> against some giant caterpillars. August is the good month: lots of tomatos everyday to replace the blueberrys.</p>
     </section>
-    <!-- ✏️ EDIT: Add your own notes and photos beneath each heading. -->
-    <section class="garden-note" aria-labelledby="raised-garden-beds">
-      <h2 id="raised-garden-beds">building raised garden beds</h2>
-    </section>
-    <section class="garden-note" aria-labelledby="chicken-coop">
-      <h2 id="chicken-coop">building chicken coop</h2>
-    </section>
-    <section class="garden-note" aria-labelledby="laying-chickens">
-      <h2 id="laying-chickens">raising laying chickens</h2>
-    </section>
-    <section class="garden-note" aria-labelledby="tomato-sauce">
-      <h2 id="tomato-sauce">making tomato sauce</h2>
-    </section>
-    <section class="garden-note" aria-labelledby="blueberries">
-      <h2 id="blueberries">harvesting blueberries</h2>
-    </section>
-    <section class="garden-note" aria-labelledby="garlic">
-      <h2 id="garlic">growing a bed of garlic</h2>
-    </section>
+    <div class="garden-posts" data-post-list>
+      <div class="filter-bar" role="group" aria-label="Filter gardening posts">
+        <button type="button" class="active" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="building" aria-pressed="false">Building</button>
+        <button type="button" data-filter="chickens" aria-pressed="false">Chickens</button>
+        <button type="button" data-filter="kitchen" aria-pressed="false">Kitchen</button>
+        <button type="button" data-filter="growing" aria-pressed="false">Growing</button>
+      </div>
+      <!-- ✏️ EDIT: Each article is one post, just like projects.html.
+           Replace "Notes to come." with your writing; add more <p> paragraphs as needed.
+           Replace "Date to come" with the real date. No dates have been assumed.
+           For photos, replace the sample filename and description, then remove the
+           comment markers around the <div class="screen"> block.
+           To add a post, copy one complete <article>...</article> below the others,
+           before this list's closing </div>. Give it a unique id and heading id.
+           Categories: building, chickens, kitchen, growing. -->
+      <!-- ✏️ EDIT POST: building raised garden beds -->
+      <article class="record r-lime" id="post-raised-garden-beds" data-category="building" aria-labelledby="raised-garden-beds">
+        <div class="r-head">
+          <span class="no">01</span>
+          <h3 id="raised-garden-beds">building raised garden beds</h3>
+          <span class="tag">Building</span>
+        </div>
+        <div class="body">
+          <!-- ✏️ EDIT: Your post text goes here. -->
+          <p>Notes to come.</p>
+          <!-- ✏️ EDIT PHOTO: Add your file to photos/, update src and alt, then uncomment:
+          <div class="screen">
+            <figure><img src="photos/raised-garden-beds.jpg" alt="Describe your photo here" loading="lazy"></figure>
+          </div>
+          -->
+          <div class="specs">
+            <div class="spec"><span class="k">Date</span><span class="v">Date to come</span></div>
+          </div>
+        </div>
+      </article>
+      <!-- ✏️ EDIT POST: building chicken coop -->
+      <article class="record r-lime" id="post-chicken-coop" data-category="building" aria-labelledby="chicken-coop">
+        <div class="r-head">
+          <span class="no">02</span>
+          <h3 id="chicken-coop">building chicken coop</h3>
+          <span class="tag">Building</span>
+        </div>
+        <div class="body">
+          <!-- ✏️ EDIT: Your post text goes here. -->
+          <p>Notes to come.</p>
+          <!-- ✏️ EDIT PHOTO: Add your file to photos/, update src and alt, then uncomment:
+          <div class="screen">
+            <figure><img src="photos/chicken-coop.jpg" alt="Describe your photo here" loading="lazy"></figure>
+          </div>
+          -->
+          <div class="specs">
+            <div class="spec"><span class="k">Date</span><span class="v">Date to come</span></div>
+          </div>
+        </div>
+      </article>
+      <!-- ✏️ EDIT POST: raising laying chickens -->
+      <article class="record r-lime" id="post-laying-chickens" data-category="chickens" aria-labelledby="laying-chickens">
+        <div class="r-head">
+          <span class="no">03</span>
+          <h3 id="laying-chickens">raising laying chickens</h3>
+          <span class="tag">Chickens</span>
+        </div>
+        <div class="body">
+          <!-- ✏️ EDIT: Your post text goes here. -->
+          <p>Notes to come.</p>
+          <!-- ✏️ EDIT PHOTO: Add your file to photos/, update src and alt, then uncomment:
+          <div class="screen">
+            <figure><img src="photos/laying-chickens.jpg" alt="Describe your photo here" loading="lazy"></figure>
+          </div>
+          -->
+          <div class="specs">
+            <div class="spec"><span class="k">Date</span><span class="v">Date to come</span></div>
+          </div>
+        </div>
+      </article>
+      <!-- ✏️ EDIT POST: making tomato sauce -->
+      <article class="record r-lime" id="post-tomato-sauce" data-category="kitchen" aria-labelledby="tomato-sauce">
+        <div class="r-head">
+          <span class="no">04</span>
+          <h3 id="tomato-sauce">making tomato sauce</h3>
+          <span class="tag">Kitchen</span>
+        </div>
+        <div class="body">
+          <!-- ✏️ EDIT: Your post text goes here. -->
+          <p>Notes to come.</p>
+          <!-- ✏️ EDIT PHOTO: Add your file to photos/, update src and alt, then uncomment:
+          <div class="screen">
+            <figure><img src="photos/tomato-sauce.jpg" alt="Describe your photo here" loading="lazy"></figure>
+          </div>
+          -->
+          <div class="specs">
+            <div class="spec"><span class="k">Date</span><span class="v">Date to come</span></div>
+          </div>
+        </div>
+      </article>
+      <!-- ✏️ EDIT POST: harvesting blueberries -->
+      <article class="record r-lime" id="post-blueberries" data-category="growing" aria-labelledby="blueberries">
+        <div class="r-head">
+          <span class="no">05</span>
+          <h3 id="blueberries">harvesting blueberries</h3>
+          <span class="tag">Growing</span>
+        </div>
+        <div class="body">
+          <!-- ✏️ EDIT: Your post text goes here. -->
+          <p>Notes to come.</p>
+          <!-- ✏️ EDIT PHOTO: Add your file to photos/, update src and alt, then uncomment:
+          <div class="screen">
+            <figure><img src="photos/blueberries.jpg" alt="Describe your photo here" loading="lazy"></figure>
+          </div>
+          -->
+          <div class="specs">
+            <div class="spec"><span class="k">Date</span><span class="v">Date to come</span></div>
+          </div>
+        </div>
+      </article>
+      <!-- ✏️ EDIT POST: growing a bed of garlic -->
+      <article class="record r-lime" id="post-garlic" data-category="growing" aria-labelledby="garlic">
+        <div class="r-head">
+          <span class="no">06</span>
+          <h3 id="garlic">growing a bed of garlic</h3>
+          <span class="tag">Growing</span>
+        </div>
+        <div class="body">
+          <!-- ✏️ EDIT: Your post text goes here. -->
+          <p>Notes to come.</p>
+          <!-- ✏️ EDIT PHOTO: Add your file to photos/, update src and alt, then uncomment:
+          <div class="screen">
+            <figure><img src="photos/garlic.jpg" alt="Describe your photo here" loading="lazy"></figure>
+          </div>
+          -->
+          <div class="specs">
+            <div class="spec"><span class="k">Date</span><span class="v">Date to come</span></div>
+          </div>
+        </div>
+      </article>
+    </div>
   </main>
   <div class="garden-footer">RYAN.STEPHENS / GARDENING</div>
 </div>
 <script src="scripts.js"></script>
+<script src="post-controls.js"></script>
 </body>
 </html>

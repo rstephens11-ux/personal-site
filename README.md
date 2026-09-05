@@ -34,7 +34,7 @@ Post text now lives in **`_posts/`**, one `.md` (Markdown/plain-text) file per p
 - `_posts/wood/` → Wood
 - `_posts/jawnz/` → Jawnz
 - `_posts/gardening/` → Gardening
-- `_posts/links/` → Interesting websites, books, and Twitter posts
+- `_posts/links/` → Interesting websites, books, Twitter posts, and YouTube channels
 
 ### Everyday editing
 1. Open a post `.md` in VS Code. Write below the second `---` line. Blank lines separate paragraphs.
@@ -93,12 +93,12 @@ Gardening categories: `building`, `chickens`, `kitchen`, `growing`.
 Wood categories: `joinery`, `carving`, `steam-bending`, `chairmaking`, `greenwoodworking`, `general`.
 Jawnz categories: `software`, `animated-series`, `seasonal`.
 
-### Add an interesting website, book, or Twitter post
+### Add a website, book, Twitter post, or YouTube channel
 
-The **Links** page opens on Websites, with Everything / Books / Twitter posts filters. It starts empty; test examples are not published recommendations.
+The **Links** page opens on Websites, with Everything / Books / Twitter posts / YouTube channels filters. It starts empty; test examples are not published recommendations.
 
-1. Copy `_authoring/new-website.md.example` into `_posts/links/` and rename it to something like `my-favourite-site.md` (remove `.example`). Book and Twitter templates sit beside it.
-2. Fill in `title`, a unique permanent `id`, and `url`. Use `category: websites`, `books`, or `twitter`.
+1. Copy `_authoring/new-website.md.example` into `_posts/links/` and rename it to something like `my-favourite-site.md` (remove `.example`). Book, Twitter, and YouTube templates sit beside it.
+2. Fill in `title`, a unique permanent `id`, and `url`. Use `category: websites`, `books`, `twitter`, or `youtube`.
 3. Write any notes below the second `---`, save, then double-click Update Preview.command. Open Links from the site navigation.
 
 ```markdown
@@ -114,7 +114,7 @@ accent: sky
 What I found interesting about it.
 ```
 
-Books can omit `url` or leave it empty. To show an author, add `specs:` with an indented `Author: Name`. Twitter posts take the full link to the post, not an embed code. No Twitter scripts, external previews, or tracking widgets are loaded. Destination links open normally in the current tab; Copy link shares your entry on this site, not the external destination.
+Books can omit `url` or leave it empty. To show an author, add `specs:` with an indented `Author: Name`. Twitter posts take the full link to the post, not an embed code. For YouTube channels, copy `_authoring/new-youtube.md.example`, set `category: youtube`, and use the channel URL (such as `https://www.youtube.com/@channel`). Add your notes below the second `---`. Channels are ordinary links, not embedded video players. No Twitter scripts, external previews, or tracking widgets are loaded. Destination links open normally in the current tab; Copy link shares your entry on this site, not the external destination.
 
 ### Add a new post
 

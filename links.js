@@ -6,7 +6,7 @@
     var kind=active?active.dataset.filter:'all';
     var any=Array.from(list.querySelectorAll('article.record')).some(function(p){return !p.hidden;});
     empty.hidden=any;
-    var names={websites:'websites',books:'books',twitter:'Twitter posts',all:'entries'};
+    var names={websites:'websites',books:'books',twitter:'Twitter posts',youtube:'YouTube channels',all:'entries'};
     empty.querySelector('h2').textContent='No '+(names[kind]||'entries')+' added yet.';
   }
   list.querySelector('.filter-bar').addEventListener('click',updateEmpty);

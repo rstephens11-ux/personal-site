@@ -97,7 +97,7 @@ def render_post(post, root, number):
         if parsed.scheme not in ('https', 'http') or not parsed.netloc:
             raise ValueError(f'{post["path"]}: URL must be a full http(s) address')
         check_url(destination, root)
-        label = {'websites': 'Visit website', 'books': 'View book', 'twitter': 'View Twitter post'}.get(post['category'], 'Visit link')
+        label = {'websites': 'Visit website', 'books': 'View book', 'twitter': 'View Twitter post', 'youtube': 'Visit YouTube channel'}.get(post['category'], 'Visit link')
         body = f'<p class="collection-source">{e(parsed.netloc)}</p>' + body + f'<p><a class="collection-destination" href="{e(destination)}">{label} ↗</a></p>'
 
     if post.get('layout') == 'side-by-side':
@@ -138,11 +138,11 @@ def build(root, check=False, bootstrap=False):
         posts = [read_post(p) for p in files]
         if folder == 'links':
             for post in posts:
-                if post['category'] not in ('websites', 'books', 'twitter'):
-                    raise ValueError(f'{post["path"]}: use category websites, books, or twitter')
-                if post['category'] in ('websites', 'twitter') and not post.get('url'):
+                if post['category'] not in ('websites', 'books', 'twitter', 'youtube'):
+                    raise ValueError(f'{post["path"]}: use category websites, books, twitter, or youtube')
+                if post['category'] in ('websites', 'twitter', 'youtube') and not post.get('url'):
                     raise ValueError(f'{post["path"]}: this entry needs a URL')
-                post.setdefault('tag', {'websites':'Website', 'books':'Book', 'twitter':'Twitter post'}[post['category']])
+                post.setdefault('tag', {'websites':'Website', 'books':'Book', 'twitter':'Twitter post', 'youtube':'YouTube channel'}[post['category']])
 
         posts.sort(key=lambda p: (p.get('order', 0), p['path']))
         ids = [p['id'] for p in posts] + [p['heading_id'] for p in posts if p.get('heading_id')]

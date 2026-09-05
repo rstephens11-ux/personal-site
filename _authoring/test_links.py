@@ -31,4 +31,22 @@ class LinksTests(unittest.TestCase):
             (root/'_posts/links/websites.md').write_text('---\nid: website\ntitle: Test\ncategory: websites\n---\nNotes')
             with self.assertRaises(ValueError):build.build(root)
 
+    def test_youtube_channel_builds_with_destination_and_requires_url(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            for folder,page in build.PAGES.items():
+                (root/'_posts'/folder).mkdir(parents=True)
+                (root/page).write_text(build.START+'\n'+build.END)
+                category='youtube' if folder=='links' else 'general'
+                url='\nurl: https://www.youtube.com/@example' if folder=='links' else ''
+                (root/'_posts'/folder/'test.md').write_text(f'---\nid: test\ntitle: Test\ncategory: {category}{url}\n---\nChannel notes.')
+            build.build(root,bootstrap=True)
+            result=(root/'links.html').read_text()
+            self.assertIn('Visit YouTube channel',result)
+            self.assertIn('YouTube channel</span>',result)
+            self.assertIn('Channel notes.',result)
+            channel=root/'_posts/links/test.md'
+            channel.write_text(channel.read_text().replace('\nurl: https://www.youtube.com/@example',''))
+            with self.assertRaisesRegex(ValueError,'needs a URL'):build.build(root)
+
 if __name__=='__main__':unittest.main()

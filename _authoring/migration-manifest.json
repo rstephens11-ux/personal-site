@@ -1,0 +1,103 @@
+{
+  "wood": [
+    {
+      "id": "app",
+      "title": "Spoons",
+      "file": "_posts/wood/01-app.md"
+    },
+    {
+      "id": "frames",
+      "title": "Frames",
+      "file": "_posts/wood/02-frames.md"
+    },
+    {
+      "id": "chest",
+      "title": "Blanket Chest - 6 Board Chest",
+      "file": "_posts/wood/03-chest.md"
+    },
+    {
+      "id": "stool",
+      "title": "Stool for Levi",
+      "file": "_posts/wood/04-stool.md"
+    },
+    {
+      "id": "macfat",
+      "title": "Make a Chair From a Tree - class at Maine Coast Craft School!",
+      "file": "_posts/wood/05-macfat.md"
+    },
+    {
+      "id": "eagle",
+      "title": "Bellamy Eagle - class with Al Breed",
+      "file": "_posts/wood/06-eagle.md"
+    },
+    {
+      "id": "carrier",
+      "title": "Bentwood Firewood Carrier - class at Maine Coast Craft School!",
+      "file": "_posts/wood/07-carrier.md"
+    },
+    {
+      "id": "shaker",
+      "title": "Shaker Box - class at the Carpenters Boat Shop",
+      "file": "_posts/wood/08-shaker.md"
+    },
+    {
+      "id": "shaker-bench",
+      "title": "Shaker Bench - built at home",
+      "file": "_posts/wood/09-shaker-bench.md"
+    },
+    {
+      "id": "chair",
+      "title": "Welsh Stick Chair - class at Maine Coast Craft School!",
+      "file": "_posts/wood/10-chair.md"
+    }
+  ],
+  "jawnz": [
+    {
+      "id": "cartoon",
+      "title": "Young George - cartoon in development",
+      "file": "_posts/jawnz/01-cartoon.md"
+    },
+    {
+      "id": "ytdlp-app",
+      "title": "yt-dlp app",
+      "file": "_posts/jawnz/02-ytdlp-app.md"
+    },
+    {
+      "id": "garden",
+      "title": "The Garden",
+      "file": "_posts/jawnz/03-garden.md"
+    }
+  ],
+  "gardening": [
+    {
+      "id": "post-raised-garden-beds",
+      "title": "building raised garden beds",
+      "file": "_posts/gardening/01-post-raised-garden-beds.md"
+    },
+    {
+      "id": "post-chicken-coop",
+      "title": "building chicken coop",
+      "file": "_posts/gardening/02-post-chicken-coop.md"
+    },
+    {
+      "id": "post-laying-chickens",
+      "title": "raising laying chickens",
+      "file": "_posts/gardening/03-post-laying-chickens.md"
+    },
+    {
+      "id": "post-tomato-sauce",
+      "title": "making tomato sauce",
+      "file": "_posts/gardening/04-post-tomato-sauce.md"
+    },
+    {
+      "id": "post-blueberries",
+      "title": "harvesting blueberries",
+      "file": "_posts/gardening/05-post-blueberries.md"
+    },
+    {
+      "id": "post-garlic",
+      "title": "growing a bed of garlic",
+      "file": "_posts/gardening/06-post-garlic.md"
+    }
+  ]
+}

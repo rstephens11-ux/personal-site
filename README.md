@@ -1,7 +1,7 @@
 # Ryan Stephens — Personal Site
 
 Static HTML/CSS/JS, published by GitHub Pages from `main` at https://ryanmichaelstephens.com.
-No framework, build step, trackers, or generated-media API calls in the site.
+No site framework, trackers, or generated-media API calls. A local Python build turns Markdown posts into static HTML.
 
 ## Current PS1 design
 
@@ -28,20 +28,87 @@ The authoritative editing/publishing folder is `~/personal-site/`. `~/personal-s
 3. Review `git diff`, stage intended files, commit, and push to `main`.
 4. Wait for the Pages build and verify the actual public URL.
 
-To add a post, copy an `<article class="record …">` block in the matching page. Set its unique `id`, `data-date` (`YYYY-MM` or `ongoing`) and `data-category` for filtering. Keep the category consistent with a filter button. Post photos remain ordinary photos, not PS1 conversions.
+## Writing posts — no HTML needed
 
-For Now, edit `.nowline` notes and the actual last-updated date. Gardening retains a dated copy of the Growing note; it is not automatically synchronized. Preserve Ryan's deliberately unpolished wording.
+Post text now lives in **`_posts/`**, one `.md` (Markdown/plain-text) file per post:
+- `_posts/wood/` → Wood
+- `_posts/jawnz/` → Jawnz
+- `_posts/gardening/` → Gardening
 
-### Editing the Gardening posts
+### Everyday editing
+1. Open a post `.md` in VS Code. Write below the second `---` line. Blank lines separate paragraphs.
+2. Save with **⌘S**.
+3. Double-click **`Update Preview.command`** in the site folder. It rebuilds all three pages locally and opens Gardening; use the navigation to check Wood/Jawnz. It does **not** publish. A brief Terminal window is normal.
+4. When ready, ask Hermes to publish. Only saved, rebuilt content is published.
 
-Open `gardening.html` and search for `EDIT POST` to find the six post blocks. They use the same article/body/photo structure as Wood:
-- Replace `<p>Notes to come.</p>` with your writing. Add more `<p>...</p>` paragraphs as needed.
-- Replace `Date to come` with the real date; none has been assumed.
-- Each post contains a commented-out photo block. Add your photo to `photos/`, update the `src` filename and `alt` description, then remove the surrounding `<!-- ... -->` markers for that photo block.
-- Categories are `building`, `chickens`, `kitchen`, and `growing`. Set `data-category` to match the desired filter.
-- To add another post, copy a complete `<article>...</article>` inside `.garden-posts`, give the article and heading unique IDs, and update `aria-labelledby` to match the heading ID.
+If the rebuild fails, an error file opens explaining why. No page is written until every post validates. A missing photo, duplicate ID, or broken details section stops the build rather than silently dropping content.
 
-Gardening currently filters by category only; it does not sort by date. These are HTML edits, not an in-browser editor. Save with ⌘S, preview, then publish. If the file was open while Hermes changed it, close and reopen the tab before editing so an old editor buffer does not overwrite the new structure.
+**Do not edit post text in `projects.html`, `other.html`, or `gardening.html` anymore.** Those post blocks are generated. Navigation, page introductions, About, Now, and Gardening's older standalone tomato note are still edited in HTML. Close your old HTML editor tabs before switching to the `.md` files. The builder detects direct edits inside generated blocks and refuses to erase them.
+
+### Plain-text formatting
+
+```markdown
+Your first paragraph. Keep writing however you like.
+
+Another paragraph with **bold words** or *italic words*.
+
+- A list item
+- Another item
+
+[Website name](https://example.com)
+
+![Describe the photo](photos/my-photo.jpg)
+```
+
+Drop photos in `photos/`, then use their exact filename. Consecutive photo lines form a gallery; the photo viewer works automatically. The photo path is relative to the site folder, not the post file. No HTML or uncommenting needed. Do not reference a photo until the file exists.
+
+### Details at the top
+
+```yaml
+---
+title: "building chicken coop"
+id: post-chicken-coop
+category: building
+tag: Building
+date: ''
+order: 2
+accent: lime
+specs:
+  Date: Date to come
+---
+```
+
+- `title`: what visitors see. Quote a title containing a colon, for example `"Notes: the garden"`.
+- `id`: the permanent link. **Keep existing IDs unchanged**, even if you rename a title.
+- `category`: must match one of the page's filter buttons.
+- `tag`: the short label beside the title.
+- `date`: sort date, `YYYY-MM`, `YYYY-MM-DD`, `ongoing`, or `''` if unknown. It does not invent or update the displayed date.
+- `order`: default display order, lower numbers first.
+- `accent`: `lime`, `coral`, `gold`, or `sky`.
+- `specs`: displayed details. Keep each detail indented two spaces. Change `Date to come` to the actual date when known.
+- Some migrated posts have `heading_id` or side-by-side image settings. Leave those as-is unless changing that layout.
+
+Gardening categories: `building`, `chickens`, `kitchen`, `growing`.
+Wood categories: `joinery`, `carving`, `steam-bending`, `chairmaking`, `greenwoodworking`, `general`.
+Jawnz categories: `software`, `animated-series`, `seasonal`.
+
+### Add a new post
+
+Duplicate an existing `.md` in the matching folder, or copy `_authoring/new-post.md.example` and rename its ending to `.md`. Set a **new unique `id`**, title, category, order, and your text. If duplicating a file with `heading_id`, remove that line or make it unique too. Rebuild and preview. Remove a post by moving its file outside `_posts/` and rebuilding.
+
+All `.md` files in these folders are published posts, **not private drafts**. Keep drafts outside the public repository. The repository itself is public even though the authoring folders are excluded from the hosted website.
+
+### Publishing / developer checks
+
+The generated HTML is committed alongside the Markdown. GitHub Pages still serves static files; no live server or database was added.
+
+```bash
+.venv/bin/python _authoring/test_build.py
+.venv/bin/python _authoring/build.py
+.venv/bin/python _authoring/build.py --check
+```
+
+Review the diff and stage intended Markdown, generated HTML, and any new photos together before committing/pushing. On a fresh checkout, install `_authoring/requirements.txt` into `.venv` and run `--check` once to establish the overwrite-protection baseline before editing. `_config.yml` excludes authoring tools and content sources from Pages output.
 
 Contact links use `mailto:hi@ryanmichaelstephens.com`; they open the visitor's email app and do not send automatically. Clicking the name in content-page navigation returns to the house.
 

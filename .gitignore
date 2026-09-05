@@ -1,2 +1,6 @@
 .DS_Store
 photos/raw/
+.venv/
+__pycache__/
+.build-state.json
+.authoring-error.txt

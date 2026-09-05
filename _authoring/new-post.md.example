@@ -1,0 +1,15 @@
+---
+title: "Your post title"
+id: a-new-unique-post-id
+category: building
+tag: Building
+date: ''
+order: 20
+accent: lime
+specs:
+  Date: Date to come
+---
+
+Write your post here. Blank lines separate paragraphs.
+
+Use **bold** or *italics* if you want.

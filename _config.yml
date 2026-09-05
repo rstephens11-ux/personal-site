@@ -1,0 +1,10 @@
+# Serve committed HTML. Source posts and local tools are not website pages.
+exclude:
+  - _posts
+  - _authoring
+  - .venv
+  - README.md
+  - AGENTS.md
+  - Update Preview.command
+  - .build-state.json
+  - .authoring-error.txt

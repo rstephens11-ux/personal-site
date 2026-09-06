@@ -1,8 +1,8 @@
 ---
-title: Shaker Bench - built at home
+title: Shaker Box - class at the Carpenters Boatshop
 id: shaker-bench
 category: steam-bending
-tag: Home Shop · 2024
+tag: Class · 2024
 date: 2024-11
 order: 9
 accent: lime

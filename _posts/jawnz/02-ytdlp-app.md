@@ -1,5 +1,5 @@
 ---
-title: yt-dlp app
+title: Lazy Downloader (yt-dlp app)
 id: ytdlp-app
 category: software
 tag: macOS app · open source

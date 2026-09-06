@@ -11,6 +11,8 @@ specs:
   Built for: This website
   Platform: macOS
   Publishing: GitHub Pages
+  Source: '[GitHub](https://github.com/rstephens11-ux/lazy-website)'
+  License: MIT
 layout: side-by-side
 image: photos/lazy-website-icon.png
 image_alt: Lazy Website app icon — smiling person typing at a keyboard

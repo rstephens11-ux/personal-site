@@ -21,7 +21,7 @@ Make one requested change at a time. Moving an object preserves its size and all
 - photos/: original project photos. See README.md for full inventory.
 
 Navigation names: WOOD / JAWNZ / GARDENING / ABOUT / NOW / CONTACT.
-Contact uses mailto:hi@ryanmichaelstephens.com (old index.html#contact no longer exists).
+Contact uses mailto:r.stephens11@gmail.com (old index.html#contact no longer exists).
 
 ## Workflow
 `~/personal-site/` is authoritative after launch. `~/personal-site-mock-terminal/` is the retained mock/QA workspace, not auto-synced.

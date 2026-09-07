@@ -134,7 +134,7 @@ The generated HTML is committed alongside the Markdown. GitHub Pages still serve
 
 Review the diff and stage intended Markdown, generated HTML, and any new photos together before committing/pushing. On a fresh checkout, install `_authoring/requirements.txt` into `.venv` and run `--check` once to establish the overwrite-protection baseline before editing. `_config.yml` excludes authoring tools and content sources from Pages output.
 
-Contact links use `mailto:hi@ryanmichaelstephens.com`; they open the visitor's email app and do not send automatically. Clicking the name in content-page navigation returns to the house.
+Contact links use `mailto:r.stephens11@gmail.com`; they open the visitor's email app and do not send automatically. Clicking the name in content-page navigation returns to the house.
 
 ## Classic design backup / future theme switch
 

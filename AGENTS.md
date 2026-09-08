@@ -20,7 +20,7 @@ Make one requested change at a time. Moving an object preserves its size and all
 - style.css/scripts.js shared; page-local styles take precedence.
 - photos/: original project photos. See README.md for full inventory.
 
-Navigation names: WOOD / JAWNZ / GARDENING / ABOUT / NOW / CONTACT.
+Navigation names: WOOD / JAWNZ / PERMACULTURE / ABOUT / NOW / CONTACT.
 Contact uses mailto:r.stephens11@gmail.com (old index.html#contact no longer exists).
 
 ## Workflow

@@ -6,14 +6,14 @@ No site framework, trackers, or generated-media API calls. A local Python build 
 ## Current PS1 design
 
 - `index.html`: coastal road and clickable Tacoma → `home.html`.
-- `home.html`: house scene; garage → Wood, front door → About, windows → Other Jawnz, mailbox → email, garden bed → Gardening, notice → Now.
+- `home.html`: house scene; garage → Wood, front door → About, windows → Other Jawnz, mailbox → email, garden bed → Permaculture, notice → Now.
 - `projects.html`: woodworking posts/photos; workshop background.
 - `other.html`: other projects; upstairs AI lab background.
 - `gardening.html`: garden background and notes.
 - `about.html`: operator file inside a monitor; scroll inside the screen.
 - `now.html`: wood-and-parchment noticeboard.
 - `style.css` / `scripts.js`: shared base styling and small interactions.
-- Page-specific styles: `wood-projects.css`, `other-jawnz.css`, `about-monitor.css`, `now-noticeboard.css` (Gardening and home have inline overrides).
+- Page-specific styles: `wood-projects.css`, `other-jawnz.css`, `about-monitor.css`, `now-noticeboard.css` (Permaculture and home have inline overrides).
 - `post-content.css` / `post-controls.js`: project filters, sorting, imported post layout.
 - `photos/`: actual project photos. Root PNG/WebP assets provide scene artwork.
 
@@ -33,18 +33,18 @@ The authoritative editing/publishing folder is `~/personal-site/`. `~/personal-s
 Post text now lives in **`_posts/`**, one `.md` (Markdown/plain-text) file per post:
 - `_posts/wood/` → Wood
 - `_posts/jawnz/` → Jawnz
-- `_posts/gardening/` → Gardening
+- `_posts/gardening/` → Permaculture
 - `_posts/links/` → Interesting websites, books, Twitter posts, and YouTube channels
 
 ### Everyday editing
 1. Open a post `.md` in VS Code. Write below the second `---` line. Blank lines separate paragraphs.
 2. Save with **⌘S**.
-3. Double-click **`Update Preview.command`** in the site folder. It rebuilds all four collection pages locally and opens Gardening; use the navigation to check Wood/Jawnz/Links. It does **not** publish. A brief Terminal window is normal.
+3. Double-click **`Update Preview.command`** in the site folder. It rebuilds all four collection pages locally and opens Permaculture; use the navigation to check Wood/Jawnz/Links. It does **not** publish. A brief Terminal window is normal.
 4. When ready, ask Hermes to publish. Only saved, rebuilt content is published.
 
 If the rebuild fails, an error file opens explaining why. No page is written until every post validates. A missing photo, duplicate ID, or broken details section stops the build rather than silently dropping content.
 
-**Do not edit post text in `projects.html`, `other.html`, `gardening.html`, or `links.html` anymore.** Those post blocks are generated. Navigation, page introductions, About, Now, and Gardening's older standalone tomato note are still edited in HTML. Close your old HTML editor tabs before switching to the `.md` files. The builder detects direct edits inside generated blocks and refuses to erase them.
+**Do not edit post text in `projects.html`, `other.html`, `gardening.html`, or `links.html` anymore.** Those post blocks are generated. Navigation, page introductions, About, Now, and Permaculture's older standalone tomato note are still edited in HTML. Close your old HTML editor tabs before switching to the `.md` files. The builder detects direct edits inside generated blocks and refuses to erase them.
 
 ### Plain-text formatting
 
@@ -89,7 +89,7 @@ specs:
 - `specs`: displayed details. Keep each detail indented two spaces. Change `Date to come` to the actual date when known.
 - Some migrated posts have `heading_id` or side-by-side image settings. Leave those as-is unless changing that layout.
 
-Gardening categories: `building`, `chickens`, `kitchen`, `growing`.
+Permaculture categories: `building`, `chickens`, `kitchen`, `growing`.
 Wood categories: `joinery`, `carving`, `steam-bending`, `chairmaking`, `greenwoodworking`, `general`.
 Jawnz categories: `software`, `animated-series`, `seasonal`.
 

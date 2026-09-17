@@ -83,15 +83,15 @@ specs:
 - `id`: the permanent link. **Keep existing IDs unchanged**, even if you rename a title.
 - `category`: must match one of the page's filter buttons.
 - `tag`: the short label beside the title.
-- `date`: sort date, `YYYY-MM`, `YYYY-MM-DD`, `ongoing`, or `''` if unknown. It does not invent or update the displayed date.
-- `order`: default display order, lower numbers first.
+- `date`: shown on the post card (`AUG 2026`) and used by the Newest/Oldest buttons, so it does double duty. Use `YYYY`, `YYYY-MM`, `YYYY-MM-DD`, or `ongoing` for a post still in progress. A bare year shows as `2025` and sorts as the oldest slot in that year.
+- `order`: default display order, lower numbers first. Pages open newest first, so this normally matches the dates.
 - `accent`: `lime`, `coral`, `gold`, or `sky`.
-- `specs`: displayed details. Keep each detail indented two spaces. Change `Date to come` to the actual date when known.
+- `specs`: displayed details. Keep each detail indented two spaces.
 - Some migrated posts have `heading_id` or side-by-side image settings. Leave those as-is unless changing that layout.
 
 Permaculture categories: `building`, `chickens`, `kitchen`, `growing`.
 Wood categories: `joinery`, `carving`, `steam-bending`, `chairmaking`, `greenwoodworking`, `general`.
-Jawnz categories: `software`, `animated-series`, `seasonal`.
+Jawnz categories: `software`, `animated-series`, `seasonal`, `hardware`.
 
 ### Add a website, book, Twitter post, or YouTube channel
 

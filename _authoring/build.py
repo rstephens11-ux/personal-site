@@ -19,6 +19,38 @@ END = '<!-- END GENERATED POSTS -->'
 MONTHS = ('JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC')
 
 
+def image_size(path):
+    """(width, height) read straight from the file header, so pages can reserve
+    space for a photo before it loads. Returns None if the format is unknown."""
+    try:
+        data = Path(path).read_bytes()
+    except OSError:
+        return None
+    if data[:8] == b'\x89PNG\r\n\x1a\n' and len(data) > 24:
+        return int.from_bytes(data[16:20], 'big'), int.from_bytes(data[20:24], 'big')
+    if data[:2] == b'\xff\xd8':  # JPEG: walk segments to the frame header
+        i = 2
+        while i + 9 < len(data):
+            if data[i] != 0xFF:
+                i += 1
+                continue
+            marker = data[i + 1]
+            if marker in (0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7, 0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF):
+                return int.from_bytes(data[i + 7:i + 9], 'big'), int.from_bytes(data[i + 5:i + 7], 'big')
+            if marker == 0xD8 or marker == 0x01 or 0xD0 <= marker <= 0xD7:
+                i += 2
+                continue
+            i += 2 + int.from_bytes(data[i + 2:i + 4], 'big')
+        return None
+    head = data[:400].decode('utf-8', 'ignore')
+    if '<svg' in head:
+        w = re.search(r'width="([\d.]+)', head)
+        h = re.search(r'height="([\d.]+)', head)
+        if w and h:
+            return int(float(w.group(1))), int(float(h.group(1)))
+    return None
+
+
 def date_label(value):
     """Turn a post's date into what the card shows: 2026-08 -> AUG 2026."""
     value = str(value or '').strip()
@@ -99,6 +131,17 @@ def markdown(text, root, inline=False):
             for child in list(gallery.contents):
                 prev.append(child.extract())
             gallery.decompose()
+    # Reserve each photo's space before it loads and defer the ones off screen,
+    # so a post with a dozen photos doesn't pull them all down up front.
+    for img in soup.find_all('img'):
+        parsed = urlsplit(img.get('src', ''))
+        if parsed.scheme or not parsed.path:
+            continue
+        size = image_size(root / unquote(parsed.path))
+        if size:
+            img['width'], img['height'] = str(size[0]), str(size[1])
+        img['loading'] = 'lazy'
+        img['decoding'] = 'async'
     return str(soup).strip()
 
 
@@ -116,7 +159,10 @@ def render_post(post, root, number):
 
     if post.get('layout') == 'side-by-side':
         check_url(post['image'], root, image=True)
-        body = f'<div class="side-by-side"><img src="{e(post["image"])}" alt="{e(post.get("image_alt", ""))}"><div>{body}</div></div>'
+        icon = image_size(root / unquote(urlsplit(post['image']).path))
+        dims = f' width="{icon[0]}" height="{icon[1]}"' if icon else ''
+        body = (f'<div class="side-by-side"><img src="{e(post["image"])}" alt="{e(post.get("image_alt", ""))}"'
+                f'{dims} loading="lazy" decoding="async"><div>{body}</div></div>')
     specs = post.get('specs', {})
     if not isinstance(specs, dict):
         raise ValueError(f'{post["path"]}: specs must be name: value pairs')

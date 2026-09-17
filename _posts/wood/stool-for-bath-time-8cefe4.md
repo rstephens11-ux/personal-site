@@ -2,8 +2,8 @@
 title: Stool for bath time
 id: stool-for-bath-time-8cefe4
 category: joinery
-date: ''
-order: 0
+date: 2026-05
+order: 2
 accent: sky
 specs:
   'Status ': In service, May 2026

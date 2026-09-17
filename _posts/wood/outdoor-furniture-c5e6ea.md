@@ -2,8 +2,8 @@
 title: Outdoor furniture
 id: outdoor-furniture-c5e6ea
 category: greenwoodworking
-date: ''
-order: 0
+date: 2024-06
+order: 13
 accent: sky
 specs:
   Status: Completed

@@ -2,8 +2,8 @@
 title: Maple Syrup
 id: maple-syrup-fd0ab2
 category: growing
-date: ''
-order: 0
+date: 2024-04
+order: 4
 accent: sky
 tag: Maple
 ---

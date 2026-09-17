@@ -190,6 +190,7 @@ footer .ok{color:var(--green)}
 .record .no{font-family:var(--pix);color:var(--dim);font-size:1.1rem}
 .record h3{font-family:var(--pix);font-weight:400;color:var(--white);font-size:1.55rem;line-height:1.05}
 .record .tag{margin-left:auto;font-size:.66rem;color:var(--dim);text-transform:uppercase;letter-spacing:.09em;text-align:right}
+.record .r-head .date{font-size:.66rem;color:var(--dim);text-transform:uppercase;letter-spacing:.09em;white-space:nowrap}
 .record .body{padding:1.1rem 1rem}
 .record .body p{color:var(--green);margin-bottom:.75rem;font-size:.95rem}
 .record .body p b{color:var(--white)}

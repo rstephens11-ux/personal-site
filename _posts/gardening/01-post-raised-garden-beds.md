@@ -3,12 +3,10 @@ title: Raised garden beds
 id: post-raised-garden-beds
 category: building
 tag: Building
-date: ''
-order: 1
+date: 2023-05
+order: 7
 accent: lime
 heading_id: raised-garden-beds
-specs:
-  Date: Date to come
 ---
 
 Built 3 more raised garden beds, lets see how long they will last. 

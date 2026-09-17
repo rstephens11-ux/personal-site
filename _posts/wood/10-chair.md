@@ -4,7 +4,7 @@ id: chair
 category: chairmaking
 tag: chairmaking · 2024
 date: 2024-07
-order: 10
+order: 12
 accent: coral
 specs:
   Material: Wood - Poplar seat & Red Oak

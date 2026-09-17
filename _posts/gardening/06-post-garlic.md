@@ -3,8 +3,8 @@ title: Garlic!
 id: post-garlic
 category: growing
 tag: Growing
-date: ''
-order: 6
+date: 2025
+order: 2
 accent: lime
 heading_id: garlic
 specs:

@@ -2,8 +2,8 @@
 title: Spoons
 id: spoons-90b4e1
 category: greenwoodworking
-date: ''
-order: 0
+date: 2025
+order: 9
 accent: sky
 specs:
   Status: Completed 2025

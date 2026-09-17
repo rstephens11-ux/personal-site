@@ -2,8 +2,8 @@
 title: Shaving Horse
 id: shaving-horse-359b9a
 category: general
-date: ''
-order: 0
+date: 2024-02
+order: 14
 accent: sky
 tag: Shaving Horse
 specs:

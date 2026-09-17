@@ -4,7 +4,7 @@ id: lazy-website
 category: software
 tag: macOS app · website editor
 date: 2026-09
-order: 2
+order: 3
 accent: gold
 specs:
   Built with: Hermes agent

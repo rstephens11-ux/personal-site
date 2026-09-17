@@ -27,6 +27,7 @@ body.wood-projects{
 .wood-projects .record h3{color:#eee3c9;text-shadow:none}
 .wood-projects .record .body p{color:#ddd7c7}
 .wood-projects .record .tag{color:#c8bda2}
+.wood-projects .record .r-head .date{color:#c8bda2}
 .wood-projects .screen{background:#171611;border-color:#524b3c}
 .wood-projects .screen img{filter:none}
 .wood-projects .screen figure::after{display:none}

@@ -4,7 +4,7 @@ id: macfat
 category: chairmaking
 tag: shop build · 2025
 date: 2025-06
-order: 5
+order: 6
 accent: gold
 specs:
   Material: Wood - Red Oak

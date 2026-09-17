@@ -4,7 +4,7 @@ id: shaker-bench
 category: steam-bending
 tag: Class · 2024
 date: 2024-11
-order: 9
+order: 11
 accent: lime
 specs:
   Material: Wood - Cherry

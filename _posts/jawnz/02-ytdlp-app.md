@@ -4,7 +4,7 @@ id: ytdlp-app
 category: software
 tag: macOS app · open source
 date: 2026-08
-order: 2
+order: 5
 accent: gold
 specs:
   Built with: Hermes agent

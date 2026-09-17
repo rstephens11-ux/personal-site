@@ -3,8 +3,8 @@ title: Summer blueberries!
 id: post-blueberries
 category: growing
 tag: Growing
-date: ''
-order: 5
+date: 2026-09
+order: 1
 accent: lime
 heading_id: blueberries
 specs:

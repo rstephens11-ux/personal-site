@@ -4,7 +4,7 @@ id: carrier
 category: steam-bending
 tag: steam bending · 2025
 date: 2025-04
-order: 7
+order: 8
 accent: gold
 specs:
   Material: Wood - Red Oak

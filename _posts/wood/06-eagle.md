@@ -4,7 +4,7 @@ id: eagle
 category: carving
 tag: carving · 2025
 date: 2025-05
-order: 6
+order: 7
 accent: lime
 specs:
   Material: Wood - Pine

@@ -4,7 +4,7 @@ id: garden
 category: software
 tag: personal website
 date: ongoing
-order: 3
+order: 2
 accent: lime
 specs:
   Status: Under construction

@@ -4,7 +4,7 @@ id: frames
 category: general
 tag: Wood · Frames
 date: 2026-05
-order: 2
+order: 3
 accent: lime
 specs:
   Material: Wood

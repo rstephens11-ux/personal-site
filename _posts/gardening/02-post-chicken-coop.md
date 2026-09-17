@@ -3,8 +3,8 @@ title: Chicken Coop build
 id: post-chicken-coop
 category: chickens
 tag: Building
-date: ''
-order: 2
+date: 2024-04
+order: 5
 accent: lime
 heading_id: chicken-coop
 specs:

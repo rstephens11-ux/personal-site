@@ -4,7 +4,7 @@ id: stool
 category: general
 tag: wood · stool · 2025
 date: 2025-07
-order: 4
+order: 5
 accent: coral
 specs:
   Material: Wood - Pine

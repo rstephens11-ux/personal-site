@@ -4,7 +4,7 @@ id: shaker
 category: steam-bending
 tag: Joinery · 2024
 date: 2024-11
-order: 8
+order: 10
 accent: lime
 specs:
   Material: Wood - Cherry

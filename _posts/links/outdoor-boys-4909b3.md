@@ -2,6 +2,7 @@
 title: Outdoor Boys
 id: outdoor-boys-4909b3
 category: youtube
+tag: YouTube channel
 date: ''
 order: 0
 accent: sky

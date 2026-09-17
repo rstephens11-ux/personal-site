@@ -3,12 +3,11 @@ title: Tomato sauce
 id: post-tomato-sauce
 category: kitchen
 tag: Cooking
-date: ''
-order: 4
+date: 2023-09
+order: 6
 accent: lime
 heading_id: tomato-sauce
 specs:
-  Date: Date to come
   Growing food: Tomatos
   Cooking: Tomato Sauce
 ---

@@ -16,6 +16,20 @@ MD = MarkdownIt('commonmark', {'html': False})
 PAGES = {'wood': 'projects.html', 'jawnz': 'other.html', 'gardening': 'gardening.html', 'links': 'links.html'}
 START = '<!-- GENERATED POSTS: edit _posts, not this block -->'
 END = '<!-- END GENERATED POSTS -->'
+MONTHS = ('JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC')
+
+
+def date_label(value):
+    """Turn a post's date into what the card shows: 2026-08 -> AUG 2026."""
+    value = str(value or '').strip()
+    if not value:
+        return ''
+    if value == 'ongoing':
+        return 'ONGOING'
+    parts = value.split('-')
+    if len(parts) >= 2 and parts[0].isdigit() and parts[1].isdigit() and 1 <= int(parts[1]) <= 12:
+        return f'{MONTHS[int(parts[1]) - 1]} {parts[0]}'
+    return value.upper()
 
 
 def read_post(path):
@@ -33,8 +47,8 @@ def read_post(path):
         if not re.fullmatch(r'[a-z][a-z0-9-]*', meta[key]):
             raise ValueError(f'{path}: {key} must be lowercase words joined by hyphens')
     date = str(meta.get('date', ''))
-    if date and date != 'ongoing' and not re.fullmatch(r'\d{4}-(0[1-9]|1[0-2])(?:-(0[1-9]|[12]\d|3[01]))?', date):
-        raise ValueError(f'{path}: date must be YYYY-MM, YYYY-MM-DD, ongoing, or empty')
+    if date and date != 'ongoing' and not re.fullmatch(r'\d{4}(?:-(0[1-9]|1[0-2])(?:-(0[1-9]|[12]\d|3[01]))?)?', date):
+        raise ValueError(f'{path}: date must be YYYY, YYYY-MM, YYYY-MM-DD, ongoing, or empty')
     accent = meta.get('accent', 'lime')
     if accent not in ('lime', 'coral', 'gold', 'sky'):
         raise ValueError(f'{path}: invalid accent')
@@ -109,8 +123,10 @@ def render_post(post, root, number):
     if specs:
         body += '\n<div class="specs">' + ''.join(f'<div class="spec"><span class="k">{e(k)}</span><span class="v">{markdown(v, root, inline=True)}</span></div>' for k, v in specs.items()) + '</div>'
     date = f' data-date="{e(post["date"])}"' if post.get('date') else ''
+    label = date_label(post.get('date', ''))
+    datelabel = f'<span class="date">{e(label)}</span>' if label else ''
     heading = f' id="{e(post["heading_id"])}"' if post.get('heading_id') else ''
-    return f'<article class="record r-{e(post.get("accent", "lime"))}" id="{e(post["id"])}" data-category="{e(post["category"])}"{date}><div class="r-head"><span class="no">{number:02d}</span><h3{heading}>{e(post["title"])}</h3><span class="tag">{e(post.get("tag", ""))}</span></div><div class="body">{body}</div></article>'
+    return f'<article class="record r-{e(post.get("accent", "lime"))}" id="{e(post["id"])}" data-category="{e(post["category"])}"{date}><div class="r-head"><span class="no">{number:02d}</span><h3{heading}>{e(post["title"])}</h3><span class="tag">{e(post.get("tag", ""))}</span>{datelabel}</div><div class="body">{body}</div></article>'
 
 
 def digest(text):

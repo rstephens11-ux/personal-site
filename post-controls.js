@@ -11,10 +11,17 @@
         var filter=button.dataset.filter,sort=button.dataset.sort;
         var visible=articles.filter(function(a){return !filter||filter==='all'||a.dataset.category===filter;});
         if(sort)visible.sort(function(a,b){
-          var da=a.dataset.date,db=b.dataset.date;
-          if(da==='ongoing'&&db==='ongoing')return 0;
-          if(da==='ongoing')return 1;
-          if(db==='ongoing')return -1;
+          var da=a.dataset.date||'',db=b.dataset.date||'';
+          if(da===db)return 0;
+          // An ongoing post counts as the most current: it leads under Newest,
+          // and drops to the end under Oldest.
+          if(da==='ongoing'||db==='ongoing'){
+            var lead=da==='ongoing'?-1:1;
+            return sort==='newest'?lead:-lead;
+          }
+          // A post with no date must never break the sort; it sits at the end.
+          if(!da)return 1;
+          if(!db)return -1;
           return sort==='newest'?db.localeCompare(da):da.localeCompare(db);
         });
         articles.forEach(function(a){a.hidden=true;});

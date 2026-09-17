@@ -4,7 +4,7 @@ id: chest
 category: joinery
 tag: white pine · dovetails · milk paint
 date: 2025-11
-order: 3
+order: 4
 accent: coral
 specs:
   Material: White pine

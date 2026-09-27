@@ -4,7 +4,7 @@ id: dual-3090-rig
 category: hardware
 tag: used GPUs · 48GB VRAM · local AI
 date: 2026-09
-order: 4
+order: 5
 accent: sky
 specs:
   Cards: 2× EVGA RTX 3090 FTW3 Ultra (used)

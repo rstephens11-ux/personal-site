@@ -1,5 +1,5 @@
 ---
-title: Two 3090s on one clip
+title: forge build complete - 2x 3090s
 id: second-card-raylight
 category: hardware
 tag: second card · ray · local AI
@@ -8,6 +8,7 @@ order: 7
 accent: sky
 specs:
   Cards: 2× EVGA RTX 3090 FTW3 Ultra
+  Two cards with: '[Raylight](https://github.com/komikndr/raylight) (Apache-2.0)'
   Second card: seated — the 6th power cable finally arrived
   Measured on one clip: 37.9 min → 21.7 min
   Power: card 1 capped 300 W, +150 MHz offset
@@ -20,7 +21,7 @@ A 3090 wants three power connectors, each on its own cable, and the supply ships
 
 With both cards in, the default behaviour is that you still render one job at a time. ComfyUI doesn't pool memory across cards — two cards means two jobs running side by side, not one job going twice as fast. So out of the box, the second card does nothing for a single clip, which is the thing I actually wanted it for.
 
-**Raylight** is the fix. It's a node pack that splits a *single* render across both cards — divides the work up rather than running two separate jobs. Same model, same settings, it just uses both pieces of hardware on one output.
+**Raylight** is the fix — [komikndr/raylight](https://github.com/komikndr/raylight), Apache-2.0. It's a node pack that splits a *single* render across both cards — divides the work up rather than running two separate jobs. Same model, same settings, it just uses both pieces of hardware on one output. Not my work and worth saying so: without it, the second card is just a spare sitting in a slot.
 
 I measured it properly, same clip both ways, nothing else changed:
 

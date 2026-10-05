@@ -15,12 +15,11 @@ specs:
   Status: card 1 running · card 2 still boxed
 ---
 
-Both cards passed the bench test, which meant the gamble turned into a build. I had never built a computer before this one, so most of what's below is me learning something the hard way and writing it down.
+Part 2 of the build - both cards passed the bench test, which meant the gamble turned into a build. I had never built a computer before this one, so most of what's below is me learning something the hard way and writing it down..maybe someone else can use it.
 
 The order I did things in: assemble it on the motherboard box first, before anything goes near the case. CPU in the socket, memory in the two slots the manual actually names, both drives, the cooler, one graphics card. Then power it on sitting on the box. If something's wrong you find out on a table instead of after a day of cable management.
 
-![The parts, all six boxes, as they arrived](photos/3090-parts-arrived.jpg)
-![Cooler mounted on the board, before anything goes in a case](photos/3090-cooler-mounted.jpg)
+![The parts, all six boxes, as they arrived](photos/3090-parts-arrived.jpg) ![Cooler mounted on the board, before anything goes in a case](photos/3090-cooler-mounted.jpg)
 
 It came up. Then the BIOS: EXPO on so the memory isn't sitting at its safe default speed, and the integrated graphics forced on, because I want the desktop coming off the processor and both 3090s doing nothing but compute.
 
@@ -48,4 +47,4 @@ Two more things I didn't know going in:
 
 What's left: the second card into the second slot, which is blocked on one more power cable — each of the three connectors on a 3090 wants its own cable, and the supply only ships with five. Then the panels back on, an undervolt, a long soak test, and wake-on-LAN, because the alternative is leaving a machine in the basement drawing about 100 W forever.
 
-Not finished. But the thing it was built for went from over an hour a clip to under two minutes, and everything after this is tuning.
+Not finished. But the thing it was built for went from over an hour a clip to under two minutes, and everything after this is tuning. Shout out my Hermes agent for the help!!

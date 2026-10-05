@@ -31,4 +31,4 @@ The number that shapes all of it: about **23.5 seconds of compute per second of 
 
 Honest limits. A piece is one engine from start to finish, because one does 16 frames a second and the other does 24 and they can't be mixed in one timeline. The sound has to be muxed on the Mac afterwards, because the rig's encoder chokes on that step. And it's a tool for one person, not a product — one window, no accounts, no sharing.
 
-Like the other things on this page, it got built by asking for it. I describe what I want, and Hermes agent writes it while I test it by using it.
+Like some of the other things on this page, it got built by asking for it. I describe what I want, and Hermes agent writes it while I test it by using it. I'm starting to get what the hype is about..
